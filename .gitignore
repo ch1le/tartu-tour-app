@@ -1,0 +1,12 @@
+# Node & Expo
+node_modules/
+.expo/
+.expo-shared/
+dist/
+web-build/
+*.log
+
+# macOS / VS Code / JetBrains etc.
+.DS_Store
+.idea/
+.vscode/
