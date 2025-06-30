@@ -1,54 +1,56 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import {
   StyleSheet,
   View,
   Text,
-  FlatList,
-  LayoutAnimation,
-  Platform,
-  UIManager,
+  ScrollView,
+  Animated,
+  Dimensions,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
 } from 'react-native';
 import MapView, { Marker, Polyline } from 'react-native-maps';
 
 import { DEMO_USER } from './constants';
 import { useTour } from './hooks/useTour';
-import { useViewability } from './hooks/useViewability';
 
-if (
-  Platform.OS === 'android' &&
-  UIManager.setLayoutAnimationEnabledExperimental
-) {
-  UIManager.setLayoutAnimationEnabledExperimental(true);
-}
+const CARD_COLLAPSED = 68;            // ~3-line height
+const CARD_EXPANDED  = 220;           // crude full height
 
-export default function MapWithTour() {
+export default function MapWithSticky() {
   const tour = useTour(10);
-  const {
-    activeIndex,
-    onViewableItemsChanged,
-    viewConfig,
-  } = useViewability();
-  const active = tour[activeIndex];
+  if (tour.length === 0) return null;                 // data guard
 
-  /* bookkeeping to soften (not eliminate) the jump ------------- */
-  const listRef   = useRef<FlatList>(null);
-  const scrollY   = useRef(0);
-  const heights   = useRef<Record<number, number>>({});
+  const [active, setActive] = useState(0);
+  const animH = useRef(new Animated.Value(CARD_COLLAPSED)).current;
 
-  const onScroll = useCallback(e => {
-    scrollY.current = e.nativeEvent.contentOffset.y;
-  }, []);
+  /* ---- scroll handler ---- */
+  const onScroll = useCallback(
+    (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+      const y = Math.max(0, e.nativeEvent.contentOffset.y);        // clamp
+      const next = Math.min(
+        tour.length - 1,
+        Math.floor(y / CARD_COLLAPSED)
+      );
+      if (next !== active) collapseThenExpand(next);
+    },
+    [active, tour.length]
+  );
 
-  const compensate = (diff: number) => {
-    listRef.current?.scrollToOffset({
-      offset: scrollY.current - diff,
-      animated: false,
-    });
+  const collapseThenExpand = (next: number) => {
+    Animated.sequence([
+      Animated.timing(animH, { toValue: CARD_COLLAPSED, duration: 120, useNativeDriver: false }),
+      Animated.timing(animH, { toValue: CARD_EXPANDED,  duration: 180, useNativeDriver: false }),
+    ]).start();
+    setActive(next);
   };
+
+  const { width } = Dimensions.get('window');
+  const current = tour[active];                        // may be undefined
 
   return (
     <View style={styles.root}>
-      {/* MAP ------------------------------------------------------ */}
+      {/* MAP **************************************************** */}
       <MapView
         style={styles.map}
         initialRegion={{
@@ -58,116 +60,86 @@ export default function MapWithTour() {
           longitudeDelta: 0.01,
         }}
       >
-        <Marker
-          coordinate={{ latitude: DEMO_USER.lat, longitude: DEMO_USER.lon }}
-          title="You (demo)"
-          pinColor="dodgerblue"
-        />
-        {tour.map((t, i) => (
-          <Marker
-            key={i}
-            coordinate={{ latitude: t.lat, longitude: t.lon }}
-            title={t.name}
-            description={t.desc}
-            pinColor={i === activeIndex ? 'tomato' : 'crimson'}
-          />
-        ))}
-        {active && (
-          <Polyline
-            coordinates={[
-              { latitude: DEMO_USER.lat, longitude: DEMO_USER.lon },
-              { latitude: active.lat, longitude: active.lon },
-            ]}
-            strokeWidth={4}
-            strokeColor="tomato"
-          />
+        {/* Pins and route only when data valid */}
+        {current && (
+          <>
+            <Marker
+              coordinate={{ latitude: DEMO_USER.lat, longitude: DEMO_USER.lon }}
+              title="You"
+              pinColor="dodgerblue"
+            />
+            {tour.map((t, i) => (
+              <Marker
+                key={i}
+                coordinate={{ latitude: t.lat, longitude: t.lon }}
+                title={t.name}
+                pinColor={i === active ? 'tomato' : 'crimson'}
+              />
+            ))}
+            <Polyline
+              coordinates={[
+                { latitude: DEMO_USER.lat, longitude: DEMO_USER.lon },
+                { latitude: current.lat,    longitude: current.lon },
+              ]}
+              strokeWidth={4}
+              strokeColor="tomato"
+            />
+          </>
         )}
       </MapView>
 
-      {/* LIST ----------------------------------------------------- */}
-      <FlatList
-        ref={listRef}
-        data={tour}
-        keyExtractor={(_, i) => String(i)}
-        style={styles.list}
-        extraData={activeIndex}
+      {/* SCROLL VIEW (collapsed cards) ************************** */}
+      <ScrollView
+        style={styles.scroller}
         onScroll={onScroll}
         scrollEventThrottle={16}
-        onViewableItemsChanged={onViewableItemsChanged}
-        viewabilityConfig={viewConfig}
-        renderItem={({ item, index }) => {
-          const isActive   = index === activeIndex;
-          const isExpanded = isActive;
+      >
+        {tour.map((t, i) => (
+          <View key={i} style={[styles.card, { width }]}>
+            <Text style={styles.title}>{t.name}</Text>
+            <Text style={styles.desc} numberOfLines={3}>
+              {t.desc}
+            </Text>
+          </View>
+        ))}
+      </ScrollView>
 
-          return (
-            <View
-              style={[
-                styles.card,
-                isActive && styles.cardActive,
-              ]}
-              onLayout={e => {
-                const h = e.nativeEvent.layout.height;
-                if (isActive && !heights.current[index]) {
-                  heights.current[index] = h;  // store full height
-                }
-              }}
-            >
-              <Text
-                style={[
-                  styles.title,
-                  isActive && styles.titleActive,
-                ]}
-              >
-                {item.name}
-              </Text>
-
-              <Text
-                style={styles.desc}
-                numberOfLines={isExpanded ? undefined : 3}
-                onTextLayout={e => {
-                  if (!isExpanded) {
-                    const full = heights.current[index];
-                    const collapsed = e.nativeEvent.lines.length
-                      ? e.nativeEvent.lines
-                          .slice(0, 3)
-                          .reduce((s, l) => s + l.height, 0) + 8
-                      : undefined;
-
-                    if (full && collapsed && full > collapsed) {
-                      const diff = full - collapsed;
-                      LayoutAnimation.configureNext(
-                        LayoutAnimation.Presets.easeInEaseOut
-                      );
-                      compensate(diff);
-                      heights.current[index] = collapsed;
-                    }
-                  }
-                }}
-              >
-                {item.desc}
-              </Text>
-            </View>
-          );
-        }}
-        ItemSeparatorComponent={() => <View style={styles.sep} />}
-      />
+      {/* OVERLAY: expanded active card ************************** */}
+      {current && (
+        <Animated.View
+          pointerEvents="none"
+          style={[styles.overlay, { height: animH, width }]}
+        >
+          <Text style={styles.overlayTitle}>{current.name}</Text>
+          <Text style={styles.overlayDesc}>{current.desc}</Text>
+        </Animated.View>
+      )}
     </View>
   );
 }
 
-/* ----------------- styles ----------------- */
+/* ---------------- styles ---------------- */
 const styles = StyleSheet.create({
   root: { flex: 1 },
 
-  map:  { flex: 0.55 },
-  list: { flex: 0.45, backgroundColor: '#fff' },
+  map: { flex: 0.55 },
 
-  card:       { padding: 16 },
-  cardActive: { backgroundColor: '#fafafa' },
+  scroller: { flex: 0.45, backgroundColor: '#fff' },
 
-  title:       { fontSize: 16, fontWeight: '600' },
-  titleActive: { fontSize: 18 },
+  card: { padding: 16, height: CARD_COLLAPSED },
+  title: { fontSize: 16, fontWeight: '600' },
+  desc:  { marginTop: 4, color: '#555' },
 
-  desc: { marginTop: 4, color: '#246BFD' },
-  sep:  { height: 1, backgroundColor: '#eee' },
+  overlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#fafafa',
+    padding: 16,
+    borderTopWidth: 1,
+    borderColor: '#eee',
+  },
+  overlayTitle: { fontSize: 18, fontWeight: '600', marginBottom: 6 },
+  overlayDesc:  { color: '#444' },
 });

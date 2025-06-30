@@ -1,5 +1,5 @@
-import MapWithTour from './src/MapWithTour';
+import MapScreen from './src/MapScreen';
 
 export default function App() {
-  return <MapWithTour />;
+  return <MapScreen />;
 }
