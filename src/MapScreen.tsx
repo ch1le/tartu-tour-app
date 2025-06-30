@@ -1,40 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   StyleSheet,
   Dimensions,
   View,
   Animated,
   PanResponder,
+  Text,
 } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { FontAwesome5, Feather } from '@expo/vector-icons';
+import LottieView from 'lottie-react-native';                    // ← NEW
 import data from '../content.json';
 
-/* ------------------- tweakables ------------------- */
+/* ---------------- tweakables ---------------- */
 const MAP_WIDTH_METERS = 700;
-const START_DELAY_MS   = 2000;   // card appears after this delay
-const EXPANDED_FRAC    = 0.4;   // 40 % of the screen
-const COLLAPSED_FRAC   = 0.1;   // 10 % of the screen
+const START_DELAY_MS   = 400;
+const FULL_FRAC        = 0.9;   // 90 %
+const MID_FRAC         = 0.4;   // 40 %
+const COLLAPSED_FRAC   = 0.1;   // 10 %
 
-/* ------------------- helpers ---------------------- */
+/* demo “you” location */
 const USER = { lat: 58.378, lon: 26.7221 };
-const metersToLonDeg = (m: number, lat: number) =>
+const m2lonDeg = (m: number, lat: number) =>
   m / (111_320 * Math.cos((lat * Math.PI) / 180));
 
-/* reusable frozen marker */
-function POIMarker({
-  lat,
-  lon,
-  icon,
-  bg,
-  tint,
-}: {
-  lat: number;
-  lon: number;
-  icon: string;
-  bg: string;
-  tint: string;
-}) {
+/* ---------------- frozen POI marker ---------------- */
+function FrozenMarker({ lat, lon, icon, bg, tint }: any) {
   const [tracks, setTracks] = useState(true);
   useEffect(() => {
     const id = setTimeout(() => setTracks(false), 500);
@@ -49,19 +40,12 @@ function POIMarker({
   );
 }
 
-/* user marker */
+/* ---------------- user pin ---------------- */
 function UserMarker() {
   const [tracks, setTracks] = useState(true);
-  useEffect(() => {
-    const id = setTimeout(() => setTracks(false), 500);
-    return () => clearTimeout(id);
-  }, []);
+  useEffect(() => { const id = setTimeout(() => setTracks(false), 500); return () => clearTimeout(id); }, []);
   return (
-    <Marker
-      coordinate={{ latitude: USER.lat, longitude: USER.lon }}
-      tracksViewChanges={tracks}
-      title="You (demo)"
-    >
+    <Marker coordinate={{ latitude: USER.lat, longitude: USER.lon }} tracksViewChanges={tracks}>
       <View style={styles.userPin}>
         <Feather name="flag" size={22} color="#fff" />
       </View>
@@ -69,142 +53,104 @@ function UserMarker() {
   );
 }
 
-/* =================== Main Screen =================== */
+/* ===================== Main Screen ===================== */
 export default function MapScreen() {
-  const targets = data.targets as {
-    name: string;
-    desc: string;
-    lat: number;
-    lon: number;
-    tag: string;
-  }[];
+  const targets = data.targets as any[];
   if (!targets.length) return null;
 
-  /* map region */
-  const latAvg = targets.reduce((s, t) => s + t.lat, 0) / targets.length;
-  const lonAvg = targets.reduce((s, t) => s + t.lon, 0) / targets.length;
+  /* ---- region math ---- */
+  const φ0 = targets.reduce((s, t) => s + t.lat, 0) / targets.length;
+  const λ0 = targets.reduce((s, t) => s + t.lon, 0) / targets.length;
   const { width, height } = Dimensions.get('window');
-  const lonDelta = metersToLonDeg(MAP_WIDTH_METERS, latAvg);
-  const latDelta = lonDelta * (height / width);
+  const λΔ = m2lonDeg(MAP_WIDTH_METERS, φ0);
+  const φΔ = λΔ * (height / width);
 
-  /* tag → icon table */
-  const icons: Record<string, { name: string; bg: string; tint: string }> = {
-    artworks:     { name: 'paint-brush', bg: '#E74C3C', tint: '#fff' },
-    museums:      { name: 'landmark',    bg: '#3498DB', tint: '#fff' },
-    architecture: { name: 'building',    bg: '#9B59B6', tint: '#fff' },
-    live:         { name: 'music',       bg: '#F1C40F', tint: '#000' },
-    bars:         { name: 'beer',        bg: '#27AE60', tint: '#fff' },
-  };
+  /* ---- bottom sheet geometry ---- */
+  const FULL_H = height * FULL_FRAC;
+  const MID_H  = height * MID_FRAC;
+  const COLL_H = height * COLLAPSED_FRAC;
 
-  /* bottom-sheet geometry */
-  const EXPANDED = height * EXPANDED_FRAC;
-  const COLLAPSED = height * COLLAPSED_FRAC;
-  const DRAG_RANGE = EXPANDED - COLLAPSED;
+  const OFF_FULL = 0;
+  const OFF_MID  = FULL_H - MID_H;
+  const OFF_COL  = FULL_H - COLL_H;
 
-  /* translateY: 0 (expanded) … DRAG_RANGE (collapsed) */
-  const translateY = useRef(new Animated.Value(DRAG_RANGE)).current;
+  const translateY = useRef(new Animated.Value(OFF_COL)).current;
 
-  /* initial slide-up after delay */
+  /* initial slide-in to mid */
   useEffect(() => {
     const id = setTimeout(() => {
-      Animated.timing(translateY, {
-        toValue: 0,
-        duration: 450,
-        useNativeDriver: true,
-      }).start();
+      Animated.timing(translateY, { toValue: OFF_MID, duration: 450, useNativeDriver: true }).start();
     }, START_DELAY_MS);
     return () => clearTimeout(id);
   }, []);
 
-  /* drag handling */
-  const startY = useRef(0);
+  /* drag logic */
+  const startY = useRef(OFF_MID);
   const pan = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
-      onPanResponderGrant: () => {
-        translateY.stopAnimation(v => (startY.current = v));
-      },
+      onPanResponderGrant: () => translateY.stopAnimation(v => (startY.current = v)),
       onPanResponderMove: (_, g) => {
-        let newY = startY.current + g.dy;
-        newY = Math.max(0, Math.min(newY, DRAG_RANGE));
-        translateY.setValue(newY);
+        const ny = Math.max(OFF_FULL, Math.min(startY.current + g.dy, OFF_COL));
+        translateY.setValue(ny);
       },
-      onPanResponderRelease: (_, g) => {
-        const mid = DRAG_RANGE / 2;
-        const dest =
-          g.vy > 0 || translateY.__getValue() > mid ? DRAG_RANGE : 0;
-        Animated.spring(translateY, {
-          toValue: dest,
-          useNativeDriver: true,
-          tension: 120,
-          friction: 15,
-        }).start();
+      onPanResponderRelease: () => {
+        const y = translateY.__getValue();
+        const dest = y < (OFF_FULL + OFF_MID) / 2 ? OFF_FULL :
+                     y < (OFF_MID + OFF_COL) / 2  ? OFF_MID  : OFF_COL;
+        Animated.spring(translateY, { toValue: dest, tension: 120, friction: 15, useNativeDriver: true }).start();
       },
     })
   ).current;
 
+  /* ---- tag → icon palette ---- */
+  const palette: any = {
+    artworks:     { icon: 'paint-brush', bg: '#E74C3C', tint: '#fff' },
+    museums:      { icon: 'landmark',    bg: '#3498DB', tint: '#fff' },
+    architecture: { icon: 'building',    bg: '#9B59B6', tint: '#fff' },
+    live:         { icon: 'music',       bg: '#F1C40F', tint: '#000' },
+    bars:         { icon: 'beer',        bg: '#27AE60', tint: '#fff' },
+  };
+
   return (
     <View style={{ flex: 1 }}>
-      {/* ---------- MAP ---------- */}
-      <MapView
-        style={styles.map}
-        region={{
-          latitude: latAvg,
-          longitude: lonAvg,
-          latitudeDelta: latDelta,
-          longitudeDelta: lonDelta,
-        }}
-      >
+      {/* MAP --------------------------------------------------- */}
+      <MapView style={styles.map} region={{ latitude: φ0, longitude: λ0, latitudeDelta: φΔ, longitudeDelta: λΔ }}>
         <UserMarker />
-        {targets.map((t, i) => {
-          const icon = icons[t.tag] ?? icons.artworks;
-          return (
-            <POIMarker
-              key={i}
-              lat={t.lat}
-              lon={t.lon}
-              icon={icon.name}
-              bg={icon.bg}
-              tint={icon.tint}
-            />
-          );
-        })}
+        {targets.map((t, i) => (
+          <FrozenMarker key={i} lat={t.lat} lon={t.lon} {...palette[t.tag]} />
+        ))}
       </MapView>
 
-      {/* ---------- BOTTOM SHEET ---------- */}
-      <Animated.View
-        {...pan.panHandlers}
-        style={[
-          styles.card,
-          { height: EXPANDED, transform: [{ translateY }] },
-        ]}
-      >
-        <View style={styles.cardHandle} />
-        {/* place any content here */}
+      {/* BOTTOM SHEET ---------------------------------------- */}
+      <Animated.View {...pan.panHandlers} style={[styles.sheet, { height: FULL_H, transform: [{ translateY }] }]}>
+        <View style={styles.handle} />
+
+        {/* CTA row with animated emoji */}
+        <View style={styles.ctaRow}>
+          <LottieView
+            source={require('../assets/lottie_surprise.json')}
+            autoPlay
+            loop
+            style={{ width: 48, height: 48, marginRight: 8 }}
+          />
+          <Text style={styles.ctaText}>
+            So many places to visit!{'\n'}Where to start?
+          </Text>
+        </View>
       </Animated.View>
     </View>
   );
 }
 
-/* ===================== styles ===================== */
+/* ---------------- styles ---------------- */
 const styles = StyleSheet.create({
   map: { flex: 1 },
 
-  pinBase: {
-    padding: 6,
-    borderRadius: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  userPin: {
-    padding: 10,
-    borderRadius: 28,
-    backgroundColor: '#000',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  pinBase: { padding: 6, borderRadius: 20, justifyContent: 'center', alignItems: 'center' },
+  userPin: { padding: 10, borderRadius: 28, backgroundColor: '#000', justifyContent: 'center', alignItems: 'center' },
 
-  card: {
+  sheet: {
     position: 'absolute',
     left: 0,
     right: 0,
@@ -218,13 +164,9 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     shadowOffset: { width: 0, height: -3 },
     padding: 16,
-    alignItems: 'center',
   },
-  cardHandle: {
-    width: 40,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: '#ccc',
-    marginBottom: 12,
-  },
+  handle: { width: 40, height: 4, borderRadius: 2, backgroundColor: '#ccc', alignSelf: 'center', marginBottom: 12 },
+
+  ctaRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 16 },
+  ctaText: { fontSize: 16, lineHeight: 22, color: '#333' },
 });
