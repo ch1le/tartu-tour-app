@@ -1,651 +1,269 @@
 /********************************************************************
- * MapScreen.tsx — unique‐ID version (handles duplicate POI names)
+ * MapScreen.tsx — fullscreen map (v7.1, counts‑sorted)
+ *  • Main & secondary tag pills include POI counts.
+ *  • Secondary tags are sorted by count (highest first).
  *******************************************************************/
-import React, {
-  useMemo,
-  useRef,
-  useState,
-  useEffect,
-  useCallback,
-} from 'react';
+import React, { memo, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Animated,
   Dimensions,
-  StyleSheet,
-  View,
-  Text,
-  ScrollView,
-  TextInput,
   Pressable,
-  PanResponder,
-  ActivityIndicator,
-  Platform,
-  StatusBar,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Region } from 'react-native-maps';
 import { Feather } from '@expo/vector-icons';
-import LottieView from 'lottie-react-native';
-import { useFonts, Raleway_500Medium } from '@expo-google-fonts/raleway';
-
 import data from '../content.json';
-import { TAG_ICONS } from './tag-icons';
 
-/* ─ constants & helpers ─ */
-const { height: SCREEN } = Dimensions.get('window');
-const COLLAPSED = SCREEN * 0.25;
-const EXPANDED = SCREEN * 0.5;
+/* ─ constants ─ */
+const USER = { lat: 39.48605, lon: -0.360325 };
+const WIDTH_METERS = 700;
+const { height: SCREEN_H, width: SCREEN_W } = Dimensions.get('window');
 
-const TAGS = [
+/* ─ visual toggle ─ */
+const CARD_ACCENT_BG = true;   // false → transparent icon + tag chips
+
+const MAIN_CATS = [
   'All',
-  'Art',
+  'Culture',
+  'Food',
   'History',
-  'Architecture',
-  'Nightlife',
-  'Food & Drink',
-  'Parks',
-  'Education',
-  'Religious',
-  'Historic',
-  'Retail',
-  'Sport',
-  'Transport',
+  'Local Commerce',
+  'Nature',
 ] as const;
+type MainCat = (typeof MAIN_CATS)[number];
 
-const TAG_FILTER: Record<(typeof TAGS)[number], string[]> = {
-  All: [],
-  Art: ['artworks'],
-  History: ['museums'],
-  Architecture: ['architecture'],
-  Nightlife: ['bars', 'live'],
-  'Food & Drink': ['food'],
-  Parks: ['park'],
-  Education: ['education'],
-  Religious: ['religious'],
-  Historic: ['historic'],
-  Retail: ['retail'],
-  Sport: ['sport'],
-  Transport: ['transportation'],
+const CATEGORY_ICONS: Record<string, keyof typeof Feather.glyphMap> = {
+  Culture: 'camera',
+  Food: 'coffee',
+  History: 'book-open',
+  'Local Commerce': 'shopping-bag',
+  Nature: 'leaf',
 };
 
-const LABEL: Record<string, string> = {
-  artworks: 'artwork',
-  museums: 'museum',
-  architecture: 'piece of architecture',
-  bars: 'bar',
-  live: 'live venue',
-  food: 'food place',
-  park: 'park',
-  education: 'educational spot',
-  religious: 'religious site',
-  historic: 'historic spot',
-  retail: 'shop',
-  sport: 'sports venue',
-  transportation: 'transport stop',
+const SECONDARY: Record<Exclude<MainCat, 'All'>, string[]> = {
+  Culture: [
+    'Activism','Alternative','Architecture','Art','Collaborative','Community','Creative','Curious','Dance','Diversity','Education','Educational','Empowering','Events','Gender','Inclusive','Innovation','Interactive','Jazz','Kids','LGBTQIA+','Literature','Local Lore','Modern','Music','Nightlife','Performance','Photography','Playful','Quirky','Reflective','Retro','Science','Social','Socio‑political','Spiritual','Tradition','True Crime','Workshops',
+  ],
+  Food: ['Bakery','Desserts','Food','Friendly','Markets','Tapas','Wine'],
+  History: ['Architecture','Heritage','Local Lore','Reflective','Retro','Tradition','True Crime','Vintage'],
+  'Local Commerce': ['Artisan','Fashion','Markets','Professional','Streetwear','Thrift','Upcycling','Vintage'],
+  Nature: ['Active','Adventurous','Chill','Cycling','Eco','Fitness','Hiking','Meditation','Open Air','Relaxing','Sustainability','Urban Exploration','Wellness'],
 };
-
-const USER = { lat: 58.378, lon: 26.7221 };
-const CARD_W = Dimensions.get('window').width - 32;
-const m2lonDeg = (m: number, lat: number) =>
-  m / (111_320 * Math.cos((lat * Math.PI) / 180));
-const isFiniteCoord = (p: { lat: number; lon: number }) =>
-  Number.isFinite(p.lat) && Number.isFinite(p.lon);
 
 type Poi = {
-  id: string;           // unique id
+  id: string;
   name: string;
   lat: number;
   lon: number;
-  tag: string;
+  category: Exclude<MainCat, 'All'>;
   desc?: string;
+  tags: string[];
 };
 
-/* ─ OUTER (fonts + loader) ─ */
-export default function MapScreen() {
-  const [fontsLoaded] = useFonts({ Raleway_500Medium });
-  if (!fontsLoaded) {
-    return (
-      <View style={styles.loader}>
-        <ActivityIndicator size="large" />
-      </View>
+/* ─ helpers ─ */
+const m2lonDeg = (m:number, lat:number)=> m/(111_320*Math.cos((lat*Math.PI)/180));
+const finite = (p:{lat:number;lon:number})=> Number.isFinite(p.lat)&&Number.isFinite(p.lon);
+
+const POIS: Poi[] = (data.targets as any[]).map((t:any,idx:number)=>({
+  id:`${t.lat},${t.lon},${idx}`,
+  name:t.name,
+  lat:t.lat,
+  lon:t.lon,
+  category:(Array.isArray(t.categories)&&t.categories[0]?t.categories[0]:'Culture') as Poi['category'],
+  desc:t.desc,
+  tags:Array.isArray(t.tags)?t.tags:[],
+})).filter(finite);
+
+const computeTargetRegion = ():Region=>{
+  const lonDelta=m2lonDeg(WIDTH_METERS,USER.lat);
+  return {
+    latitude:USER.lat,
+    longitude:USER.lon,
+    latitudeDelta:lonDelta*(SCREEN_H/SCREEN_W),
+    longitudeDelta:lonDelta,
+  };
+};
+
+/* ─ main category counts (static) ─ */
+const MAIN_COUNTS: Record<Exclude<MainCat,'All'>,number> = (()=> {
+  const obj:any={};
+  MAIN_CATS.forEach(c=>{ if(c!=='All') obj[c]=0; });
+  POIS.forEach(p=>{ obj[p.category] += 1; });
+  return obj;
+})();
+
+/* ─ Marker ─ */
+const DotMarker = memo(({poi,selected,onPress}:{poi:Poi;selected:boolean;onPress:()=>void})=>{
+  const [tracks,setTracks]=useState(true);
+  useEffect(()=>{setTracks(true);const id=setTimeout(()=>setTracks(false),300);return()=>clearTimeout(id);},[selected]);
+  const icon=CATEGORY_ICONS[poi.category];
+  return(
+    <Marker coordinate={{latitude:poi.lat,longitude:poi.lon}} title={poi.name} tracksViewChanges={tracks} onPress={onPress}>
+      {selected
+        ? <View style={styles.pinSelected}><Feather name={icon} size={18} color="#fff"/></View>
+        : <View style={styles.pinSmall}><Feather name={icon} size={14} color="#333"/></View>}
+    </Marker>
+  );
+});
+
+/* ─ component ─ */
+export default function MapScreen(){
+  const mapRef=useRef<MapView>(null);
+  const [mainCat,setMainCat]=useState<MainCat>('All');
+  const [subTag,setSubTag]=useState<string|null>(null);
+  const [selectedId,setSelectedId]=useState<string|null>(null);
+
+  useEffect(()=>setSubTag(null),[mainCat]);
+
+  const [startRegion,targetRegion]=useMemo(()=>{
+    const trg=computeTargetRegion();
+    return [{...trg,latitudeDelta:trg.latitudeDelta*5,longitudeDelta:trg.longitudeDelta*5},trg];
+  },[]);
+
+  /* visible POIs */
+  const visible=useMemo(()=>POIS.filter(p=>{
+    if(mainCat!=='All'&&p.category!==mainCat) return false;
+    if(subTag&&!p.tags.includes(subTag)) return false;
+    return true;
+  }),[mainCat,subTag]);
+
+  /* dynamic secondary counts */
+  const secondaryCounts = useMemo(()=>{
+    const map:Record<string,number>={};
+    if(mainCat==='All') return map;
+    POIS.filter(p=>p.category===mainCat).forEach(p=>{
+      p.tags.forEach(tag=>{ map[tag]=(map[tag]||0)+1;});
+    });
+    return map;
+  },[mainCat]);
+
+  /* sorted secondary tags */
+  const secondarySorted = useMemo(()=>{
+    if(mainCat==='All') return [];
+    return [...SECONDARY[mainCat]].sort(
+      (a,b)=>(secondaryCounts[b]??0)-(secondaryCounts[a]??0)
     );
-  }
-  return <MapScreenInner />;
-}
+  },[mainCat,secondaryCounts]);
 
-/* ─ INNER component ─ */
-function MapScreenInner() {
-  const mapRef = useRef<MapView>(null);
-  const sheetY = useRef(new Animated.Value(COLLAPSED)).current;
+  /* keep selection valid */
+  useEffect(()=>{ if(selectedId&&!visible.find(p=>p.id===selectedId)) setSelectedId(null);},[visible,selectedId]);
+  const selectedPoi=useMemo(()=>visible.find(p=>p.id===selectedId)||null,[selectedId,visible]);
 
-  /* ui state */
-  const [cat, setCat] = useState<(typeof TAGS)[number]>('All');
-  const [prompt, setPrompt] = useState('');
-  const [msgs, setMsgs] = useState<string[]>([]);
-  const [pois, setPois] = useState<Poi[]>([]);
-  const [showInput, setShowInput] = useState(false);
-  const [activeId, setActiveId] = useState<string | undefined>();
+  const tagExtraSpace = selectedPoi ? 0 : 32;
 
-  /* Easter-egg */
-  const [tapSeq, setTapSeq] = useState<string | null>(null);
-  const tapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const tapEmoji = () => {
-    setTapSeq(prev => (prev ? `${prev} tap` : 'tap'));
-    if (tapTimer.current) clearTimeout(tapTimer.current);
-    tapTimer.current = setTimeout(() => setTapSeq(null), 600);
-  };
-
-  useEffect(() => {
-    const id = setTimeout(() => setShowInput(true), 300);
-    return () => clearTimeout(id);
-  }, []);
-
-  /* dataset — normalise tags, add id */
-  const all = useMemo(() => {
-    const raw = data.targets as any[];
-    return raw
-      .map((r, idx) => {               // ← grab index too
-        const tag =
-          Array.isArray(r.tags) && r.tags.length ? r.tags[0] : r.tag;
-        const id = `${r.lat},${r.lon},${idx}`;   // new (always unique)
-        return { ...r, id, tag } as Poi;
-      })
-      .filter(isFiniteCoord);
-  }, []);
-
-  /* map region around USER */
-  const { width, height } = Dimensions.get('window');
-  const [startR, targetR] = useMemo(() => {
-    const φ0 = USER.lat;
-    const λ0 = USER.lon;
-    const λΔ = m2lonDeg(700, φ0);
-    const φΔ = λΔ * (height / width);
-    return [
-      {
-        latitude: φ0 + φΔ * 0.25,
-        longitude: λ0,
-        latitudeDelta: 60,
-        longitudeDelta: 60,
-      },
-      {
-        latitude: φ0 + φΔ * 0.25,
-        longitude: λ0,
-        latitudeDelta: φΔ,
-        longitudeDelta: λΔ,
-      },
-    ];
-  }, [width, height]);
-
-  /* active-card bookkeeping */
-  const listH = useRef(0);
-  const layouts = useRef<Record<string, { y: number; h: number }>>({});
-  const computeActive = useCallback((scrollY = 0) => {
-    if (!listH.current) return;
-    const mid = scrollY + listH.current / 2;
-    for (const [id, { y, h }] of Object.entries(layouts.current)) {
-      if (mid >= y && mid <= y + h) {
-        setActiveId(id);
-        return;
-      }
-    }
-  }, []);
-
-  /* map pins */
-  const visible = useMemo(
-    () =>
-      (cat === 'All'
-        ? all
-        : all.filter(p => TAG_FILTER[cat].includes(p.tag))
-      ).map(p => ({
-        ...p,
-        selected: !!pois.find(a => a.id === p.id),
-        latest: p.id === activeId,
-      })),
-    [cat, all, pois, activeId],
-  );
-
-  /* drawer helpers */
-  const animateTo = useCallback(
-    (to: number) =>
-      Animated.timing(sheetY, {
-        toValue: to,
-        duration: 250,
-        useNativeDriver: false,
-      }).start(),
-    [sheetY],
-  );
-  const expand = () => animateTo(0);
-  const collapse = () => animateTo(COLLAPSED);
-
-  const pan = useRef(
-    PanResponder.create({
-      onMoveShouldSetPanResponder: (_, g) =>
-        Math.abs(g.dy) > 10 && Math.abs(g.dx) < 10,
-      onPanResponderMove: (_, g) => {
-        const newY = Math.min(
-          COLLAPSED,
-          Math.max(0, sheetY._value + g.dy),
-        );
-        sheetY.setValue(newY);
-      },
-      onPanResponderRelease: (_, g) => {
-        if (g.vy > 0.25 || g.dy > 50) collapse();
-        else if (g.vy < -0.25 || g.dy < -50) expand();
-        else sheetY._value < COLLAPSED / 2 ? expand() : collapse();
-      },
-    }),
-  ).current;
-
-  /* actions */
-  const focusPoi = (poi: Poi) => {
-    setPois(a => [...a.filter(p => p.id !== poi.id), poi]);
-    setActiveId(poi.id);
-    expand();
-  };
-  const removePoi = (id: string) => {
-    setPois(a => a.filter(p => p.id !== id));
-    if (id === activeId) setActiveId(undefined);
-  };
-  const send = () => {
-    const t = prompt.trim();
-    if (!t) return;
-    setMsgs(m => [...m, t]);
-    setPrompt('');
-  };
-
-  /* header text */
-  const activePoi = activeId
-    ? pois.find(p => p.id === activeId)
-    : pois[pois.length - 1];
-  const header = activePoi
-    ? `This seems to be a ${
-        LABEL[activePoi.tag] ?? 'place'
-      } called:\n${activePoi.name}`
-    : 'Oooh, So many interesting places.\nWhere oh where to start…';
-
-  /* ─ render ─ */
-  return (
-    <View style={{ flex: 1, backgroundColor: '#fff' }}>
-      {/* map */}
-      <MemoMap
+  return(
+    <View style={styles.container}>
+      {/* Map */}
+      <MapView
         ref={mapRef}
-        startRegion={startR}
-        targetRegion={targetR}
-        points={visible}
-        onMapPress={collapse}
-        onPoiPress={focusPoi}
-      />
-
-      {/* drawer */}
-      <Animated.View
-        style={[styles.drawer, { transform: [{ translateY: sheetY }] }]}
-        {...pan.panHandlers}
+        style={StyleSheet.absoluteFillObject}
+        initialRegion={startRegion}
+        onMapReady={()=>mapRef.current?.animateToRegion(targetRegion,1200)}
+        onPress={()=>setSelectedId(null)}
       >
-        {/* tag pills */}
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={styles.tagBarDock}
-          contentContainerStyle={{ paddingLeft: 16 }}
-        >
-          {TAGS.map(t => {
-            const sel = t === cat;
-            return (
-              <Pressable
-                key={t}
-                onPress={() => setCat(t)}
-                style={[styles.tagPill, sel && styles.tagSel]}
-              >
-                <Text style={[styles.tagTxt, sel && styles.tagSelTxt]}>
-                  {t}
-                </Text>
-              </Pressable>
-            );
-          })}
-        </ScrollView>
+        {visible.map(p=>(
+          <DotMarker key={p.id} poi={p} selected={p.id===selectedId} onPress={()=>setSelectedId(p.id)}/>
+        ))}
+        <Marker coordinate={{latitude:USER.lat,longitude:USER.lon}} title="You are here" tracksViewChanges={false} zIndex={999}>
+          <View style={styles.userPin}><Feather name="flag" size={18} color="#fff"/></View>
+        </Marker>
+      </MapView>
 
-        {/* header */}
-        <Pressable
-          onPress={() =>
-            sheetY._value < COLLAPSED / 2 ? collapse() : expand()
-          }
-        >
-          <View style={styles.headerRow}>
-            <Pressable onPress={tapEmoji}>
-              <LottieView
-                source={require('../assets/lottie_surprise.json')}
-                autoPlay
-                loop
-                style={{ width: 24, height: 24, marginRight: 8 }}
-              />
-            </Pressable>
-            <Text style={styles.headerTxt}>{tapSeq ?? header}</Text>
-          </View>
-        </Pressable>
+      {/* Bottom panel */}
+      <View style={styles.bottomPanel} pointerEvents="box-none">
+        {/* Tag bars */}
+        <View pointerEvents="auto" style={{ marginBottom: tagExtraSpace }}>
+          {/* Main tags */}
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.tagScroll} style={styles.mainBar}>
+            {MAIN_CATS.map(cat=>{
+              const sel=cat===mainCat;
+              const count = cat==='All' ? POIS.length : MAIN_COUNTS[cat as Exclude<MainCat,'All'>];
+              return(
+                <Pressable key={cat} style={[styles.tagPill,sel&&styles.tagSel]} onPress={()=>setMainCat(cat)}>
+                  <Text style={[styles.tagTxt,sel&&styles.tagSelTxt]}>{cat} ({count})</Text>
+                </Pressable>
+              );
+            })}
+          </ScrollView>
+          {/* Secondary tags */}
+          {mainCat!=='All'&&(
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.tagScroll} style={styles.subBar}>
+              {secondarySorted.map(tag=>{
+                const sel=tag===subTag;
+                const count=secondaryCounts[tag]??0;
+                return(
+                  <Pressable key={tag} style={[styles.tagPill,sel&&styles.tagSel]} onPress={()=>setSubTag(sel?null:tag)}>
+                    <Text style={[styles.tagTxt,sel&&styles.tagSelTxt]}>{tag} ({count})</Text>
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+          )}
+        </View>
 
-        {/* prompt */}
-        {showInput && (
-          <View style={styles.promptRow}>
-            <TextInput
-              style={styles.promptInput}
-              value={prompt}
-              onChangeText={setPrompt}
-              placeholder="Mmm, I'm thinking of coffee…"
-              placeholderTextColor="#888"
-              multiline
-            />
-            <Pressable style={styles.sendBtn} onPress={send}>
-              <Feather name="send" size={18} color="#fff" />
-            </Pressable>
-          </View>
-        )}
-
-        {/* bubbles + cards */}
-        <ScrollView
-          style={{ flex: 1 }}
-          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}
-          onLayout={e => {
-            listH.current = e.nativeEvent.layout.height;
-            computeActive();
-          }}
-          onScroll={e => computeActive(e.nativeEvent.contentOffset.y)}
-          scrollEventThrottle={16}
-          keyboardShouldPersistTaps="handled"
-        >
-          {msgs.map((m, i) => (
-            <View key={`m-${i}`} style={styles.bubble}>
-              <Text style={styles.bubbleTxt}>{m}</Text>
-            </View>
-          ))}
-
-          {[...pois].reverse().map(p => (
-            <View
-              key={p.id}
-              style={styles.cardWrap}
-              onLayout={e => {
-                const { y, height } = e.nativeEvent.layout;
-                layouts.current[p.id] = { y, h: height };
-                computeActive();
-              }}
-            >
-              <Pressable
-                onPress={() => removePoi(p.id)}
-                style={styles.cardDelete}
-                hitSlop={8}
-              >
-                <Feather name="x" size={16} color="#fff" />
-              </Pressable>
-              <View style={styles.card}>
-                <View style={styles.cardImg}>
-                  <Feather
-                    name={TAG_ICONS[p.tag] ?? 'map-pin'}
-                    size={32}
-                    color="#666"
-                  />
+        {/* Info card */}
+        {selectedPoi&&(
+          <>
+            <Pressable style={StyleSheet.absoluteFill} onPress={()=>setSelectedId(null)}/>
+            <View style={styles.cardWrapper}>
+              <View style={styles.cardHeaderRow}>
+                <View style={[
+                  styles.cardIconBox,
+                  !CARD_ACCENT_BG && { backgroundColor:'transparent' },
+                ]}>
+                  <Feather name={CATEGORY_ICONS[selectedPoi.category]} size={20} color="#333"/>
                 </View>
-                <Text style={styles.cardTitle}>{p.name}</Text>
-                <Text style={styles.cardDesc}>
-                  {p.desc ?? 'No description provided.'}
-                </Text>
+                <Text style={styles.cardTitle}>{selectedPoi.name}</Text>
               </View>
+              {selectedPoi.tags.length>0&&(
+                <View style={styles.cardTagRow}>
+                  {selectedPoi.tags.map(t=>(
+                    <View key={t} style={[
+                      styles.cardTagPill,
+                      !CARD_ACCENT_BG && { backgroundColor:'transparent' },
+                    ]}>
+                      <Text style={styles.cardTagTxt}>{t}</Text>
+                    </View>
+                  ))}
+                </View>
+              )}
+              <ScrollView style={styles.descScroll} contentContainerStyle={{paddingBottom:8}}>
+                <Text style={styles.cardDesc}>{selectedPoi.desc||'No description provided.'}</Text>
+              </ScrollView>
             </View>
-          ))}
-        </ScrollView>
-      </Animated.View>
+          </>
+        )}
+      </View>
     </View>
   );
 }
 
-/* ─ DotMarker & MemoMap ─ */
-const DotMarker = React.memo(
-  ({
-    poi,
-    selected,
-    latest,
-    onPress,
-  }: {
-    poi: Poi;
-    selected: boolean;
-    latest: boolean;
-    onPress: () => void;
-  }) => {
-    const [tracks, setTracks] = useState(true);
-    useEffect(() => {
-      setTracks(true);
-      const id = setTimeout(() => setTracks(false), 300);
-      return () => clearTimeout(id);
-    }, [selected, latest]);
-
-    const icon = TAG_ICONS[poi.tag] ?? 'map-pin';
-    return (
-      <Marker
-        coordinate={{ latitude: poi.lat, longitude: poi.lon }}
-        onPress={onPress}
-        tracksViewChanges={tracks}
-      >
-        {latest ? (
-          <View style={styles.pinLatest}>
-            <Feather name={icon} size={18} color="#fff" />
-          </View>
-        ) : selected ? (
-          <View style={styles.pinMedium}>
-            <Feather name={icon} size={18} color="#333" />
-          </View>
-        ) : (
-          <View style={styles.pinSmall}>
-            <Feather name={icon} size={12} color="#333" />
-          </View>
-        )}
-      </Marker>
-    );
-  },
-);
-
-const MemoMap = React.memo(
-  React.forwardRef<MapView, any>(
-    (
-      { startRegion, targetRegion, points, onMapPress, onPoiPress },
-      ref,
-    ) => (
-      <MapView
-        ref={ref}
-        style={{ flex: 1 }}
-        initialRegion={startRegion}
-        moveOnMarkerPress={false}
-        onPress={onMapPress}
-        onLongPress={onMapPress}
-        onPanDrag={onMapPress}
-        onMapReady={() =>
-          (
-            ref as React.RefObject<MapView>
-          ).current?.animateToRegion(targetRegion, 1200)
-        }
-      >
-        {points.map((p: any) => (
-          <DotMarker
-            key={p.id}
-            poi={p}
-            selected={p.selected}
-            latest={p.latest}
-            onPress={() => onPoiPress(p)}
-          />
-        ))}
-        <Marker coordinate={{ latitude: USER.lat, longitude: USER.lon }} zIndex={999}>
-          <View style={styles.userPin}>
-            <Feather name="flag" size={18} color="#fff" />
-          </View>
-        </Marker>
-      </MapView>
-    ),
-  ),
-);
-
-/* ─ styles (unchanged) ─ */
+/* ─ styles ─ */
 const styles = StyleSheet.create({
-  tagBarDock: {
-    position: 'absolute',
-    top: -44,
-    left: 0,
-    right: 0,
-    zIndex: 30,
-  },
+  container:{ flex:1, backgroundColor:'#fff' },
 
-  tagPill: {
-    backgroundColor: '#f0f0f0',
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 6,
-    marginRight: 10,
-  },
-  tagSel: { backgroundColor: '#333' },
-  tagTxt: { fontFamily: 'Raleway_500Medium', fontSize: 14, color: '#333' },
-  tagSelTxt: { color: '#fff' },
+  pinSmall:{ width:22,height:22,borderRadius:11,backgroundColor:'#fff',justifyContent:'center',alignItems:'center',borderWidth:1,borderColor:'#333' },
+  pinSelected:{ width:30,height:30,borderRadius:15,backgroundColor:'#000',justifyContent:'center',alignItems:'center',borderWidth:2,borderColor:'#000' },
+  userPin:{ width:30,height:30,borderRadius:15,backgroundColor:'#333',borderWidth:2,borderColor:'#333',justifyContent:'center',alignItems:'center' },
 
-  pinSmall: {
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  pinMedium: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#000',
-  },
-  pinLatest: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#000',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#000',
-  },
-  userPin: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: '#000',
-    borderWidth: 2,
-    borderColor: '#000',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  bottomPanel:{ position:'absolute',left:0,right:0,bottom:0,paddingHorizontal:12,pointerEvents:'box-none' },
+  tagScroll:{ paddingHorizontal:12 },
+  mainBar:{ marginBottom:4 },
+  subBar:{ marginBottom:8 },
+  tagPill:{ backgroundColor:'#f0f0f0',borderRadius:16,paddingHorizontal:14,paddingVertical:6,marginRight:10,marginBottom:4 },
+  tagSel:{ backgroundColor:'#333' },
+  tagTxt:{ fontSize:14,color:'#333' },
+  tagSelTxt:{ color:'#fff' },
 
-  drawer: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: EXPANDED,
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
-    elevation: 8,
-  },
-
-  headerRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingTop: 50,
-    paddingBottom: 4,
-  },
-  headerTxt: {
-    fontFamily: 'Raleway_500Medium',
-    fontSize: 18,
-    color: '#333',
-    flex: 1,
-  },
-
-  promptRow: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    marginHorizontal: 16,
-    marginTop: 10,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 12,
-    backgroundColor: '#fafafa',
-    padding: 8,
-  },
-  promptInput: {
-    flex: 1,
-    fontSize: 16,
-    fontFamily: 'Raleway_500Medium',
-    paddingRight: 8,
-    maxHeight: 120,
-  },
-  sendBtn: {
-    backgroundColor: '#333',
-    borderRadius: 20,
-    width: 34,
-    height: 34,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  bubble: {
-    alignSelf: 'flex-end',
-    backgroundColor: '#333',
-    borderRadius: 12,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    marginVertical: 4,
-    maxWidth: '80%',
-  },
-  bubbleTxt: {
-    fontFamily: 'Raleway_500Medium',
-    fontSize: 16,
-    color: '#fff',
-  },
-
-  cardWrap: { marginTop: 20, position: 'relative' },
-  cardDelete: {
-    position: 'absolute',
-    top: -10,
-    right: -10,
-    backgroundColor: '#333',
-    borderRadius: 12,
-    width: 24,
-    height: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
-    zIndex: 5,
-  },
-  card: {
-    width: CARD_W,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 12,
-  },
-  cardImg: {
-    height: 80,
-    backgroundColor: '#eee',
-    borderRadius: 6,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
-  cardTitle: {
-    fontFamily: 'Raleway_500Medium',
-    fontSize: 16,
-    color: '#333',
-    marginBottom: 4,
-  },
-  cardDesc: { fontSize: 14, lineHeight: 20, color: '#555' },
-
-  loader: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
+  cardWrapper:{ marginTop:8,maxHeight:SCREEN_H*0.5,backgroundColor:'#fff',borderTopLeftRadius:16,borderTopRightRadius:16,padding:16,elevation:8,shadowColor:'#000',shadowOpacity:0.15,shadowRadius:10,shadowOffset:{ width:0,height:-3 } },
+  cardHeaderRow:{ flexDirection:'row',alignItems:'center',marginBottom:8 },
+  cardIconBox:{ width:28,height:28,borderRadius:14,backgroundColor:'#eee',justifyContent:'center',alignItems:'center',marginRight:8 },
+  cardTitle:{ fontSize:18,fontWeight:'600',color:'#333',flexShrink:1 },
+  cardTagRow:{ flexDirection:'row',flexWrap:'wrap',marginBottom:8 },
+  cardTagPill:{ backgroundColor:'#eee',borderRadius:12,paddingHorizontal:10,paddingVertical:4,marginRight:6,marginBottom:6 },
+  cardTagTxt:{ fontSize:12,color:'#333' },
+  descScroll:{ flexGrow:0 },
+  cardDesc:{ fontSize:14,lineHeight:20,color:'#555' },
 });
