@@ -1,5 +1,5 @@
 /********************************************************************
- * MapScreen.tsx — drawer + dynamic active POI + tag bar + “tap” Easter-egg
+ * MapScreen.tsx — unique‐ID version (handles duplicate POI names)
  *******************************************************************/
 import React, {
   useMemo,
@@ -42,21 +42,45 @@ const TAGS = [
   'Architecture',
   'Nightlife',
   'Food & Drink',
+  'Parks',
+  'Education',
+  'Religious',
+  'Historic',
+  'Retail',
+  'Sport',
+  'Transport',
 ] as const;
+
 const TAG_FILTER: Record<(typeof TAGS)[number], string[]> = {
   All: [],
   Art: ['artworks'],
   History: ['museums'],
   Architecture: ['architecture'],
   Nightlife: ['bars', 'live'],
-  'Food & Drink': ['bars'],
+  'Food & Drink': ['food'],
+  Parks: ['park'],
+  Education: ['education'],
+  Religious: ['religious'],
+  Historic: ['historic'],
+  Retail: ['retail'],
+  Sport: ['sport'],
+  Transport: ['transportation'],
 };
+
 const LABEL: Record<string, string> = {
   artworks: 'artwork',
   museums: 'museum',
   architecture: 'piece of architecture',
   bars: 'bar',
   live: 'live venue',
+  food: 'food place',
+  park: 'park',
+  education: 'educational spot',
+  religious: 'religious site',
+  historic: 'historic spot',
+  retail: 'shop',
+  sport: 'sports venue',
+  transportation: 'transport stop',
 };
 
 const USER = { lat: 58.378, lon: 26.7221 };
@@ -65,7 +89,15 @@ const m2lonDeg = (m: number, lat: number) =>
   m / (111_320 * Math.cos((lat * Math.PI) / 180));
 const isFiniteCoord = (p: { lat: number; lon: number }) =>
   Number.isFinite(p.lat) && Number.isFinite(p.lon);
-type Poi = { name: string; lat: number; lon: number; tag: string; desc?: string };
+
+type Poi = {
+  id: string;           // unique id
+  name: string;
+  lat: number;
+  lon: number;
+  tag: string;
+  desc?: string;
+};
 
 /* ─ OUTER (fonts + loader) ─ */
 export default function MapScreen() {
@@ -91,15 +123,15 @@ function MapScreenInner() {
   const [msgs, setMsgs] = useState<string[]>([]);
   const [pois, setPois] = useState<Poi[]>([]);
   const [showInput, setShowInput] = useState(false);
-  const [activeName, setActiveName] = useState<string | undefined>();
+  const [activeId, setActiveId] = useState<string | undefined>();
 
-  /* NEW — Easter-egg state */
+  /* Easter-egg */
   const [tapSeq, setTapSeq] = useState<string | null>(null);
   const tapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const tapEmoji = () => {
-    setTapSeq(prev => (prev ? `${prev} *tap*` : '*tap*\n'));
+    setTapSeq(prev => (prev ? `${prev} tap` : 'tap'));
     if (tapTimer.current) clearTimeout(tapTimer.current);
-    tapTimer.current = setTimeout(() => setTapSeq(null), 1200);
+    tapTimer.current = setTimeout(() => setTapSeq(null), 600);
   };
 
   useEffect(() => {
@@ -107,15 +139,24 @@ function MapScreenInner() {
     return () => clearTimeout(id);
   }, []);
 
-  /* dataset & region */
-  const all = useMemo(
-    () => (data.targets as Poi[]).filter(isFiniteCoord),
-    [],
-  );
+  /* dataset — normalise tags, add id */
+  const all = useMemo(() => {
+    const raw = data.targets as any[];
+    return raw
+      .map((r, idx) => {               // ← grab index too
+        const tag =
+          Array.isArray(r.tags) && r.tags.length ? r.tags[0] : r.tag;
+        const id = `${r.lat},${r.lon},${idx}`;   // new (always unique)
+        return { ...r, id, tag } as Poi;
+      })
+      .filter(isFiniteCoord);
+  }, []);
+
+  /* map region around USER */
   const { width, height } = Dimensions.get('window');
   const [startR, targetR] = useMemo(() => {
-    const φ0 = all.reduce((s, t) => s + t.lat, 0) / all.length;
-    const λ0 = all.reduce((s, t) => s + t.lon, 0) / all.length;
+    const φ0 = USER.lat;
+    const λ0 = USER.lon;
     const λΔ = m2lonDeg(700, φ0);
     const φΔ = λΔ * (height / width);
     return [
@@ -132,7 +173,7 @@ function MapScreenInner() {
         longitudeDelta: λΔ,
       },
     ];
-  }, [all, width, height]);
+  }, [width, height]);
 
   /* active-card bookkeeping */
   const listH = useRef(0);
@@ -140,9 +181,9 @@ function MapScreenInner() {
   const computeActive = useCallback((scrollY = 0) => {
     if (!listH.current) return;
     const mid = scrollY + listH.current / 2;
-    for (const [name, { y, h }] of Object.entries(layouts.current)) {
+    for (const [id, { y, h }] of Object.entries(layouts.current)) {
       if (mid >= y && mid <= y + h) {
-        setActiveName(name);
+        setActiveId(id);
         return;
       }
     }
@@ -156,10 +197,10 @@ function MapScreenInner() {
         : all.filter(p => TAG_FILTER[cat].includes(p.tag))
       ).map(p => ({
         ...p,
-        selected: !!pois.find(a => a.name === p.name),
-        latest: p.name === activeName,
+        selected: !!pois.find(a => a.id === p.id),
+        latest: p.id === activeId,
       })),
-    [cat, all, pois, activeName],
+    [cat, all, pois, activeId],
   );
 
   /* drawer helpers */
@@ -196,13 +237,13 @@ function MapScreenInner() {
 
   /* actions */
   const focusPoi = (poi: Poi) => {
-    setPois(a => [...a.filter(p => p.name !== poi.name), poi]);
-    setActiveName(poi.name);
+    setPois(a => [...a.filter(p => p.id !== poi.id), poi]);
+    setActiveId(poi.id);
     expand();
   };
-  const removePoi = (n: string) => {
-    setPois(a => a.filter(p => p.name !== n));
-    if (n === activeName) setActiveName(undefined);
+  const removePoi = (id: string) => {
+    setPois(a => a.filter(p => p.id !== id));
+    if (id === activeId) setActiveId(undefined);
   };
   const send = () => {
     const t = prompt.trim();
@@ -212,8 +253,8 @@ function MapScreenInner() {
   };
 
   /* header text */
-  const activePoi = activeName
-    ? pois.find(p => p.name === activeName)
+  const activePoi = activeId
+    ? pois.find(p => p.id === activeId)
     : pois[pois.length - 1];
   const header = activePoi
     ? `This seems to be a ${
@@ -239,7 +280,7 @@ function MapScreenInner() {
         style={[styles.drawer, { transform: [{ translateY: sheetY }] }]}
         {...pan.panHandlers}
       >
-        {/* tag pills docked to drawer top */}
+        {/* tag pills */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -262,14 +303,13 @@ function MapScreenInner() {
           })}
         </ScrollView>
 
-        {/* header row */}
+        {/* header */}
         <Pressable
           onPress={() =>
             sheetY._value < COLLAPSED / 2 ? collapse() : expand()
           }
         >
           <View style={styles.headerRow}>
-            {/* emoji now tappable */}
             <Pressable onPress={tapEmoji}>
               <LottieView
                 source={require('../assets/lottie_surprise.json')}
@@ -282,7 +322,7 @@ function MapScreenInner() {
           </View>
         </Pressable>
 
-        {/* prompt row */}
+        {/* prompt */}
         {showInput && (
           <View style={styles.promptRow}>
             <TextInput
@@ -302,17 +342,12 @@ function MapScreenInner() {
         {/* bubbles + cards */}
         <ScrollView
           style={{ flex: 1 }}
-          contentContainerStyle={{
-            paddingHorizontal: 16,
-            paddingBottom: 16,
-          }}
+          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}
           onLayout={e => {
             listH.current = e.nativeEvent.layout.height;
             computeActive();
           }}
-          onScroll={e =>
-            computeActive(e.nativeEvent.contentOffset.y)
-          }
+          onScroll={e => computeActive(e.nativeEvent.contentOffset.y)}
           scrollEventThrottle={16}
           keyboardShouldPersistTaps="handled"
         >
@@ -324,16 +359,16 @@ function MapScreenInner() {
 
           {[...pois].reverse().map(p => (
             <View
-              key={p.name}
+              key={p.id}
               style={styles.cardWrap}
               onLayout={e => {
                 const { y, height } = e.nativeEvent.layout;
-                layouts.current[p.name] = { y, h: height };
+                layouts.current[p.id] = { y, h: height };
                 computeActive();
               }}
             >
               <Pressable
-                onPress={() => removePoi(p.name)}
+                onPress={() => removePoi(p.id)}
                 style={styles.cardDelete}
                 hitSlop={8}
               >
@@ -360,7 +395,7 @@ function MapScreenInner() {
   );
 }
 
-/* ─ DotMarker & MemoMap (unchanged) ─ */
+/* ─ DotMarker & MemoMap ─ */
 const DotMarker = React.memo(
   ({
     poi,
@@ -427,7 +462,7 @@ const MemoMap = React.memo(
       >
         {points.map((p: any) => (
           <DotMarker
-            key={`${p.name}:${p.lat}`}
+            key={p.id}
             poi={p}
             selected={p.selected}
             latest={p.latest}
@@ -444,7 +479,7 @@ const MemoMap = React.memo(
   ),
 );
 
-/* ─ styles ─ */
+/* ─ styles (unchanged) ─ */
 const styles = StyleSheet.create({
   tagBarDock: {
     position: 'absolute',
@@ -520,7 +555,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingTop: 8,
+    paddingTop: 50,
     paddingBottom: 4,
   },
   headerTxt: {

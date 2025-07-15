@@ -1,809 +1,2304 @@
 {
   "targets": [
     {
-      "name": "Suve tõotus",
-      "desc": "Niisiis ma tõotasin endale, et kavatsen järgmise suve veeta nagu see oleks mu viimane siin elus",
-      "lat": 58.3742899,
-      "lon": 26.7057406,
-      "tag": "artworks"
-    },
-    {
-      "name": "Anna Haava",
-      "desc": "Emakeelepäev 2016 – SirLudvig",
-      "lat": 58.3783143,
-      "lon": 26.7047945,
-      "tag": "museums"
-    },
-    {
-      "name": "On aeg",
-      "desc": "On aeg katkestada T-vibratsioon ja visata külmetatud siil oma kitsast voodist välja",
-      "lat": 58.3762153,
-      "lon": 26.6980346,
-      "tag": "architecture"
-    },
-    {
-      "name": "Käsna-Kalle",
-      "desc": "Kellele suvaline kollane kapp, kellele Käsna-Kalle.",
-      "lat": 58.378445,
-      "lon": 26.706144,
-      "tag": "live"
-    },
-    {
-      "name": "Multistab ninakollid",
-      "desc": "Multistabi standartselt suur teos nõuab lähemalt vaatamiseks kahjuks aiaületust.\n\nA sizable work as it is customary with Multistab, but unfortunately in order to be viewed a fence needs to be crossed.\n\nhttp://multistab.ee/",
-      "lat": 58.3774297,
-      "lon": 26.6986012,
-      "tag": "bars"
-    },
-    {
-      "name": "Facter Loomingu rõdul",
-      "desc": "Hosteli Looming rõdule on jätnud endast märgi Stencibility tänavakunstifestivali sõber Austraalia tänavakunstnik Facter.\n\n.https://www.facebook.com/facter",
-      "lat": 58.371784,
-      "lon": 26.714247,
-      "tag": "artworks"
-    },
-    {
-      "name": "Stencil semiootikutelt",
-      "desc": "Palju *märke* sisaldav töö Tartu Ülikooli semiootikaosakonna endisest lähedusest. Üleval vasakus nurgas Juri Lotmani ninaga mees.\n\nA work filled with signs near the vicinity of the former Semiotics Department of the University of Taru. A man in the top left corner has Juri Lotman's nose.",
-      "lat": 58.374012,
-      "lon": 26.711741,
-      "tag": "museums"
-    },
-    {
-      "name": "Eurosent",
-      "desc": "Nagu lähedalasuv tekst plangul, on seegi ilmselt mõeldud suhtlema kõrvaloleva Töötukassa kontoriga.\n\nMuch like the sign on the fence this work is meant as a communicative act with the nearby unemployment office.",
-      "lat": 58.372715,
-      "lon": 26.708987,
-      "tag": "architecture"
-    },
-    {
-      "name": "Silt Töötukassa juures",
-      "desc": "Neid löövate kirjanduslike tsitaatidega silte, mis on tokiga maasse löödud või plankudele kruvitud, leiab Tartust mõnikümmend. Kuna nende asukoht muutub tihti, ei saa kõiki neid kaardile panna. See silt Töötukassa juures aga on väga visa: seda kruvitakse järjepidevalt uuesti sama koha peale tagasi, kui vahepeal kaduma on läinud.\n \nIn Tartu there are dozens of signs bearing literary quotes such as this. Since their locations keep changing they can't all be put on the map. However this particular sign near the unemployment office is very resilient, whenever one goes missing a new one pops up.",
-      "lat": 58.3730998,
-      "lon": 26.7087799,
-      "tag": "live"
-    },
-    {
-      "name": "Kannahabe ja Nõiakütt",
-      "desc": "Politseinik Nõia Kütt arreteerib Sammalhabet, kelle pikas habemes kasvab kanep. Kohtumaja vastas asuvat tööd võib tõlgendada kui kommentaari praeguste liiga karmide narkoseaduste kohta. #edwardvonlõngus #stencil\n\nPolice man Witch Hunter is arresting Sammalhabe with cannabis growing in his long beard („Moss Beard” a famous Estonian fictional children's character). Situated across the Supreme Court, the piece can be interpreted as a commentary on the current strict drug policy. #edwardvonlõngus #stencil",
-      "lat": 58.3790821,
-      "lon": 26.7162421,
-      "tag": "bars"
-    },
-    {
-      "name": "Identiteet",
-      "desc": "Anonüümsed mustad siluetid lahkamaks tänavakunstnike identiteedi- probleemi.\n+ Rodo Dodo ja muud tegelased\n\nAnonymous black silhouettes by Edward von Lõngus dealing with identity issues facing street artists. + Rodo Dodo & others\n\nhttp://evl-genius.blogspot.com",
-      "lat": 58.376817,
-      "lon": 26.707914,
-      "tag": "artworks"
-    },
-    {
-      "name": "Maja Toomel",
-      "desc": "Valge mahajäetud pisemat sorti hoone on aegade jooksul hoolsalt täiendust saanud. #biigtussulaav",
-      "lat": 58.3786703,
-      "lon": 26.714716,
-      "tag": "museums"
-    },
-    {
-      "name": "Nimetu",
-      "desc": "Anastasia Papaleonida & Seikon",
-      "lat": 58.3761765,
-      "lon": 26.7180765,
-      "tag": "architecture"
-    },
-    {
-      "name": "tüdrik",
-      "desc": "TAF-i koostöö COSH-ga.",
-      "lat": 58.3876158,
-      "lon": 26.6928184,
-      "tag": "live"
-    },
-    {
-      "name": "Kas nüüd on kunst?",
-      "desc": "Tartus juba aastaid rahulikult seinal seisnud, aga Tallinnas väga palju kõneainet tekitanud (http://pluss.postimees.ee/3148733/alasti-keisri-pildi-asemele-tekkis-majaseinale-natuurmort) MinaJaLydia stencil aastast 2007, mil on kujutatud natüürmorti koos tekstiga \"kas nüüd on kunst?\". + Stina Leeki Silmlill & anonüümne Bomb\n\nA stencil by MinaJaLydia from 2007 has been peacefully here in Tartu for years, but has caused much debate in Tallinn, depicts a still life along with the line „Is it art now?” + Stina Leek`s Eyeflower & anonymous bomb",
-      "lat": 58.38211,
-      "lon": 26.714373,
-      "tag": "bars"
-    },
-    {
-      "name": "@ Kairo's",
-      "desc": "Legendi kohaselt elab Kairo kuskil siin läheduses ning sellepärast leiab siit ka palju tema töid.\n\nLegend has it that Kairo's habitat is somewhere near, which explains why so many of her works are scattered around the area.",
-      "lat": 58.3865627,
-      "lon": 26.7121062,
-      "tag": "artworks"
-    },
-    {
-      "name": "Maasikas Kairo moodi",
-      "desc": "Isuäratav maasikas kirjul elektrikapil koos mõne ettearvamatu lisandiga.\n\nA colourful electricity cabinet displaying a mouth watering strawberry with an unexpected ingredient.",
-      "lat": 58.3860228,
-      "lon": 26.7115563,
-      "tag": "museums"
-    },
-    {
-      "name": "\"Hüva õied\"",
-      "desc": "Supilinna päevade ajal maalitud Kairo tetraptühhon on autori sõnul sõnamäng Baudelaire'i raamatuga \"Kurja õied\" ning viitab helgele elule ja trikster Erkki Hüvale.\n\nA tetraptychon \"The Flowers of Good\" by Kairo painted during the festival of the city district of Supilinn; according to the author it is a word play on Baudelaire's The Flowers of Evil and a reference to a brighter life and also to a local trickster named Erkki Hüva (Erkki Good).",
-      "lat": 58.384042,
-      "lon": 26.716859,
-      "tag": "architecture"
-    },
-    {
-      "name": "Südameasi",
-      "desc": "Stencil, mis avab Lõnguse pehmemat poolt.\n\nStencil that shows the softer side of Edward von Lõngus.",
-      "lat": 58.38486,
-      "lon": 26.709732,
-      "tag": "live"
-    },
-    {
-      "name": "Mahajäetud maja. / An abondoned building",
-      "desc": "Nagu ka teised omaniku hooleta jäänud hooned, kattub ka see vaikselt kultuurikihiga.",
-      "lat": 58.381783,
-      "lon": 26.713686,
-      "tag": "bars"
-    },
-    {
-      "name": "Supilinna kassid",
-      "desc": "Kunstnik: Maria Evestus\nKassi fotod: Helen rae",
-      "lat": 58.3852618,
-      "lon": 26.7164369,
-      "tag": "artworks"
-    },
-    {
-      "name": "Supilinn 15",
-      "desc": "Poola kunstnike Sepe ja Chazme maalitud suur mural \"Supilinn 15\" ühendab Tartu ja Poola kultuuriruumi. Seinamaaling on inspireeritud kahe 20. sajandi alguses Tartus sündinud Poola kunstniku loomingust – arhitekt Jerzy Hryniewiecki kuulsast Spodek hoonest Poolas ja maalikunstnik Bronisław Linke väga tuntud ja nüüdseks juba märgiliseks saanud maalist “Autobus”. *** A large mural called Supilinn 15 created by Polish artists Sepe and Chazme connects the cultures of Poland and Tartu. The mural is inspired by the works of two Polish artists born in Tartu in the beginning of the 20th century. One is the famous Spodek building created by architect Jerzy Hryniewiecki (among others) and the other is a well-known painting titled Autobus by painter Bronisław Linke that has become quite symbolic.",
-      "lat": 58.3851666,
-      "lon": 26.709837,
-      "tag": "museums"
-    },
-    {
-      "name": "Kairo",
-      "desc": "Aasta: 2020",
-      "lat": 58.3827105,
-      "lon": 26.7133688,
-      "tag": "architecture"
-    },
-    {
-      "name": "Kvaliteetaeg",
-      "desc": "Kvaliteetaeg/ Quality time",
-      "lat": 58.3829765,
-      "lon": 26.7093639,
-      "tag": "live"
-    },
-    {
-      "name": "Linnuparv",
-      "desc": "– SirLudvig",
-      "lat": 58.3836438,
-      "lon": 26.7175671,
-      "tag": "bars"
-    },
-    {
-      "name": "\"Õed\"",
-      "desc": "#kairo #akrüliiti #acryliti",
-      "lat": 58.3880249,
-      "lon": 26.7151639,
-      "tag": "artworks"
-    },
-    {
-      "name": "Magdaleena puhkusel",
-      "desc": "http://minajalydia.tumblr.com",
-      "lat": 58.38835,
-      "lon": 26.708635,
-      "tag": "museums"
-    },
-    {
-      "name": "Maja",
-      "desc": "Lõnguse ownitud mahajäetud maja Marja tänaval.\n\nAn abandoned house on Marja street pwned by Edward von Lõngus.",
-      "lat": 58.387687,
-      "lon": 26.713938,
-      "tag": "architecture"
-    },
-    {
-      "name": "Kairo",
-      "desc": "Kairo maalitud pilt erineb enamusest Tartus leitavast tänavakunstist selle tõttu, et on tehtud klassikalisele maalile iseloomuliku akrüülvärvi ja pintsliga, mitte spreivärvidega. #akrüliiti\nwww.kairo.ee",
-      "lat": 58.387475,
-      "lon": 26.715864,
-      "tag": "live"
-    },
-    {
-      "name": "Radioaktiivne supelrand",
-      "desc": "Isegi poid ei pääse kontekstualiseerimisest.\n#müra2000 (http://mra2000.carbonmade.com/)\n\nEven the buoys can't escape from contextualizing\n#müra2000 (http://mra2000.carbonmade.com/)",
-      "lat": 58.392682,
-      "lon": 26.709609,
-      "tag": "bars"
-    },
-    {
-      "name": "Satinka",
-      "desc": "Jõe-äärne stencil Satinkalt (http://satinka0.tumblr.com/)",
-      "lat": 58.393796,
-      "lon": 26.709459,
-      "tag": "artworks"
-    },
-    {
-      "name": "Alasti rand",
-      "desc": "Alasti rand/ Naked beach",
-      "lat": 58.3934614,
-      "lon": 26.7096803,
-      "tag": "museums"
-    },
-    {
-      "name": "Koostöö",
-      "desc": "Koostöö/ Collab",
-      "lat": 58.3938902,
-      "lon": 26.7160934,
-      "tag": "architecture"
-    },
-    {
-      "name": "Harajuku kaksikud",
-      "desc": "Jaapanist pärit harajuku subkultuuri esindavad kaksikud, kes autori sõnul sümboliseerivad kunstniku MinaJaLydia topeltidentiteeti http://minajalydia.tumblr.com\n\nHarajuku twins famous within the Japanese pop-culture symbolize the double identity of artist MinaJaLydia. http://minajalydia.tumblr.com",
-      "lat": 58.360313,
-      "lon": 26.7211102,
-      "tag": "live"
-    },
-    {
-      "name": "Multistab",
-      "desc": "Tallinna- põhise rühmituse Multistab suurteos, mis sündis 2011. a Stencibility tänavakunstifestivalil.\nwww.multistab.ee.\n.\nA Tallinn-based crew Multistab for Stencibility 2011.\nwww.multistab.ee",
-      "lat": 58.367061,
-      "lon": 26.721121,
-      "tag": "bars"
-    },
-    {
-      "name": "Kashink",
-      "desc": "Prantsusmaalt pärit tänavakunstniku Kashink'i poolt tehtud teos 2013. aasta Stencibility tänavakunstifestivalil. Autori enda sõnul räägib pilt eestlaste suitsukalalembusest.\nwww.kashink.com\n\nKashink from France for Stencibility 2013. According to the author the piece talks about the love Estonians have for smoked fish.\n\nwww.kashink.com",
-      "lat": 58.367207,
-      "lon": 26.721105,
-      "tag": "artworks"
-    },
-    {
-      "name": "Thobek & Rudens",
-      "desc": "Lätlaste Thobek'i ja Rudens'i töö Võru tänaval, mis kolmanda teosena jätkab eelmistel Stencibility festivalidel alustatud nn. tänavakunsti kvartalit. Aastase vahega täiendas oma kurikuulsa karakteriga kolleegide tööd Läti tänavakunsti pahapoiss Kiwie.\n\nA piece from Latvian guys Thobek and Rudens that continues the tradition to add something here on every Stencibility festival.",
-      "lat": 58.367373,
-      "lon": 26.721116,
-      "tag": "museums"
-    },
-    {
-      "name": "Võru tänava galerii",
-      "desc": "Lisaks festivali ajal tehtud töödele, on seinale tekkinud ka väga ilusaid omaalgatuslikke stencleid. Ümber nurga on ka Eesti Hiphop Festivali mural.\n\nIn addition to Stencibility festival works one can find lots of beautiful stencils made by personal initiative. There's a mural for Estonian Hiphop festival around the corner.",
-      "lat": 58.366916,
-      "lon": 26.721116,
-      "tag": "architecture"
-    },
-    {
-      "name": "Spagetid ja ussid",
-      "desc": "Putuktoiduline Kairo demonstreerib oma einetaldrikut. #toidupropaganda\n\nBug-eating Kairo demonstrating her dinner plate with spaghetti and worms. #foodpropaganda",
-      "lat": 58.3665374,
-      "lon": 26.7296398,
-      "tag": "live"
-    },
-    {
-      "name": "Hapnik maja nurgas",
-      "desc": "Töö ilmus maja nurgale üleöö ja on tänini kohalike poolt palavalt armastatud.",
-      "lat": 58.3698055,
-      "lon": 26.7280034,
-      "tag": "bars"
-    },
-    {
-      "name": "Kvaliteetaeg 2",
-      "desc": "Kvaliteetaeg 2/Quality time 2",
-      "lat": 58.369619,
-      "lon": 26.7275308,
-      "tag": "artworks"
-    },
-    {
-      "name": "Maharajadhiraj Maharaja...",
-      "desc": "... Mahimahendra Maharao Raja Sri Sir Umed Singhji II Sahib Bahadur. NB! Tööd enam ei ole\n\nminajalydia.tumblr.com",
-      "lat": 58.366785,
-      "lon": 26.72552,
-      "tag": "museums"
-    },
-    {
-      "name": "Tartu Waimud",
-      "desc": "2021a\nAutor?",
-      "lat": 58.3672017,
-      "lon": 26.7220107,
-      "tag": "architecture"
-    },
-    {
-      "name": "Vincent",
-      "desc": "Väga detailne fotorealistlik stencil MinaJaLydia inimeste seeriast. Mehe tätoveeringut lähedalt uurides leiab palju huvitavaid viiteid.\n\nA highly detailed photorealistic stencil from the people series by MinaJaLydia. There are many interesting references when you take a closer look at the man's tattoos.\nhttp://minajalydia.tumblr.com",
-      "lat": 58.364602,
-      "lon": 26.740052,
-      "tag": "live"
-    },
-    {
-      "name": "Looduse armastajad",
-      "desc": "Looduse armastajad/ Nature lovers",
-      "lat": 58.3645715,
-      "lon": 26.7393129,
-      "tag": "bars"
-    },
-    {
-      "name": "Auto",
-      "desc": "Auto/ Car",
-      "lat": 58.3646186,
-      "lon": 26.7309465,
-      "tag": "artworks"
-    },
-    {
-      "name": "Fotosüntees",
-      "desc": "Fotosüntees/ Photosynthesis",
-      "lat": 58.3627544,
-      "lon": 26.7300983,
-      "tag": "museums"
-    },
-    {
-      "name": "Stencibility \"Minu esimene sein\"",
-      "desc": "Stencibility kavandikonkursi \"Minu esimene sein\" pind, mille töö vahetub igal aastal.",
-      "lat": 58.3684604,
-      "lon": 26.733647,
-      "tag": "architecture"
-    },
-    {
-      "name": "Muster",
-      "desc": "Hiigelsuur muster elumaja seinal, mis on sama kirev kui Karlova ise #TAF #stencil\n\nGiant pattern on the wall of a house as varied as Karlova area itself. #TAF #stencil",
-      "lat": 58.367719,
-      "lon": 26.7312008,
-      "tag": "live"
-    },
-    {
-      "name": "Mull",
-      "desc": "Väga kohaspetsiifiline töö MinaJaLydialt - stseen mulli sees on pärit täpselt sellelt samalt tänavanurgalt, kus elektrikapp stencliga asub.\n\nA very site specific work by MinaJaLydia – the scene within the bubble is from the very same street corner where the electricity cabinet stands.\n\nminajalydia.tumblr.com",
-      "lat": 58.369311,
-      "lon": 26.732365,
-      "tag": "bars"
-    },
-    {
-      "name": "Hapnik \"Tolstoi ja Gandhi\"",
-      "desc": "Kas teadsid, et Lev Tolstoi ja Gandhi olid omavahel kirjavahetuses? Tehtud Stencibility 2017 raames.",
-      "lat": 58.3693507,
-      "lon": 26.7329848,
-      "tag": "artworks"
-    },
-    {
-      "name": "Mosaiiklinnud",
-      "desc": "Kaks mosaiiklindu demonstreerivad uhkesti õrrel istudes Tartu tänavakunsti tehnilist mitmekesisust.\n\nTwo mosaic birds sitting proud on their perch demonstrate the technical diversity of Tartu street art.",
-      "lat": 58.370335,
-      "lon": 26.730187,
-      "tag": "museums"
-    },
-    {
-      "name": "Alliku autoportree",
-      "desc": "Stencil-koopia Peeter Alliku linoollõikest \"Autoportree\". Valminud gümnaasiumiõpilastega läbiviidud töötoas koostöös Stencibility ja Tartu Kunstimajaga.\n\nStencil copy of Peeter Allik's linocut \"Self-portrait\". Result of a workshop involving high school students in cooperation between Stencibility and Tartu Art House.",
-      "lat": 58.3751781,
-      "lon": 26.7207912,
-      "tag": "architecture"
-    },
-    {
-      "name": "No siempre es ver para creer",
-      "desc": "Tšiilist pärit kunstniku Izak One töö pealkirjaga \"Seeing isn't always believing\" *** A piece by Chilean artist Izak One titled Seeing isn't always believing. #stencibility2015 http://izakone.blogspot.com",
-      "lat": 58.3721302,
-      "lon": 26.7294949,
-      "tag": "live"
-    },
-    {
-      "name": "Salme kultuurimaja",
-      "desc": "Väike majake Salme tänava alguses, mis meenutab Hansu ja Grete muinasjuttu tänu Mimiko ja Kairo lisandustele.\n\nA little house in the beginning of Salme street with a Hansel and Gretel atmosphere thanks to works by Mimiko and Kairo.",
-      "lat": 58.3713398,
-      "lon": 26.7295164,
-      "tag": "bars"
-    },
-    {
-      "name": "err:)r",
-      "desc": "Katkine naerunägu räägib kunstniku sõnul sellest, kuidas jube raske on teha ilusat nägu, kui tegelikult on koodis viga – visuaal on tekkinud pildifaili katkisest, moondunud koodist.\n\nThe fragmented smiley face is about the fact that it is awfully difficult to put on a happy face when there is an error in the code, according to the author MinaJaLydia. The artwork has been created based on the broken, deformed code of the image file.",
-      "lat": 58.373646,
-      "lon": 26.724694,
-      "tag": "artworks"
-    },
-    {
-      "name": "Predaator",
-      "desc": "Üks kuulsatest tulnukküttide rassi esindajatest jälgimas kõiki Riia tänal liiklejaid kõrgelt-kõrgelt. #edwardvonlõngus #stencil\n\nA specimen of the famous alien race of hunters watching the traffic from up high on Riia street. #edwardvonlõngus #stencil\n\nhttp://evl-genius.blogspot.com",
-      "lat": 58.375191,
-      "lon": 26.723707,
-      "tag": "museums"
-    },
-    {
-      "name": "Shape your own reality",
-      "desc": "#Kala from Kuressaare",
-      "lat": 58.370839,
-      "lon": 26.729275,
-      "tag": "architecture"
-    },
-    {
-      "name": "Päeva Galerii",
-      "desc": "Koht, mis oli enne Vabaduse silla ehitamist tänavakunstnike meelispaik. Praegu on jäänud sinna suur kogu stencleid, aga erinevalt Vabaduse Galeriist ei ole ekspositsioon uuenenud enam aastaid.\n \nA favourite spot of the street artists before the construction of the Vabaduse (Freedom) Bridge. Presently it showcases a fairly large stencil collection, although unlike the Freedom Gallery the exhibition here has not been updated for years.",
-      "lat": 58.373098,
-      "lon": 26.727912,
-      "tag": "live"
-    },
-    {
-      "name": "Lõikuskuul",
-      "desc": "Eduard Rüga Lõikuskuul 1975\nTeostus: Sprayprinter",
-      "lat": 58.3737422,
-      "lon": 26.7240755,
-      "tag": "bars"
-    },
-    {
-      "name": "Olümpia",
-      "desc": "Olümpia/ Olympics",
-      "lat": 58.3716289,
-      "lon": 26.7256981,
-      "tag": "artworks"
-    },
-    {
-      "name": "Abstraktsioon",
-      "desc": "Abstraktsioon/Abstraction",
-      "lat": 58.3724225,
-      "lon": 26.7210425,
-      "tag": "museums"
-    },
-    {
-      "name": "Kaseke",
-      "desc": "Endine Kasekese pood, mis nagu ka teised omaniku hooleta jäänud hooned, kattub kultuurikihiga.\n\nFormer shop called Kaseke, that has accumulated layers of culture similarly to other abandoned buildings.",
-      "lat": 58.37051,
-      "lon": 26.727183,
-      "tag": "architecture"
-    },
-    {
-      "name": "Pargi saun",
-      "desc": "Vana saunahoone, mille pealt leiab sõnumeid seinast seina.\n\nAn old sauna building displaying messages of all shapes and sizes.",
-      "lat": 58.371025,
-      "lon": 26.727888,
-      "tag": "live"
-    },
-    {
-      "name": "Hapnik",
-      "desc": "Peaaegu kogu Hapniku (http://hapnik.blogspot.com/) portfoolio Loomemajanduskeskuse taga",
-      "lat": 58.374561,
-      "lon": 26.728299,
-      "tag": "bars"
-    },
-    {
-      "name": "Noor Putin",
-      "desc": "All you need is love! #vonbomb #youngputin",
-      "lat": 58.3742738,
-      "lon": 26.7227358,
-      "tag": "artworks"
-    },
-    {
-      "name": "MTO \"Ms Reet\"",
-      "desc": "Prantsuse tänavakunstniku MTO fotorealistlik teos \"Ms Reet\" kaitseb majas asuvat väikest esoteerikapoodi suurte kaubanduskeskuste eest, mis aja jooksul vallutavad kogu kesklinna. #stencibility 2014\n\nThe photorealistic mural \"Ms Reet\" by the French street artist MTO shields a small esoteric shop operating in the building from large shopping centers that are taking over the city center. #stencibility 2014\n\nwww.flickr.com/mto-graff",
-      "lat": 58.37603,
-      "lon": 26.728642,
-      "tag": "museums"
-    },
-    {
-      "name": "Alasti keiser",
-      "desc": "Vabariigi aastapäeval tekkinud stencil, mis autori Edward von Lõnguse sõnul on pühendatud kõigile keisritele, kes on suutnud veenda valijaid oma üli(k)konna ülimuslikkuses, ning rahvale, kes mängu kaasa teeb.\n\nA stencil that appeared on the day of the Anniversary of the Republic and according to the author Edward von Lõngus it is dedicated to all the emperors who have managed to convince the voters of the supremacy of their clothes and to all the people who play along.",
-      "lat": 58.377332,
-      "lon": 26.7220022,
-      "tag": "architecture"
-    },
-    {
-      "name": "Lydia Koidula",
-      "desc": "Edward von Lõnguse versioon Lydia Koidulast, kes on jäänud töötuks pärast koondamist 100 krooni rahatähe pealt, kui Eestis euro käibele võeti. Tekkis tänavatele koos Tammsaarega (http://evl-genius.blogspot.com/2011/02/blog-post.html)\n\nKoidula ja Tammsaare teos lõuendil püstitas 2012a kevadel Tartu noore kunsti oksjonil rekordi saavutades lõpphinnaks 1200 eurot. (http://evl-genius.blogspot.com/2013/05/oksjonirekord.html)\n\nYet another classic from the 100 kroon note sharing the fate of Tammsaare.",
-      "lat": 58.3809826,
-      "lon": 26.7243847,
-      "tag": "live"
-    },
-    {
-      "name": "Edgar Allan Poe",
-      "desc": "Sõnamäng Poe tänaval : Edgar Allan Poe portree.\n\nMihhail Lotmani lemmik (http://www.lotman.ee/1/post/2011/09/tnavamaalid-ja-graffiti-tartus.html\n\nA wordplay on Poe (Shop's) Street : a portrait of Edgar Allan Poe.",
-      "lat": 58.379337,
-      "lon": 26.723345,
-      "tag": "bars"
-    },
-    {
-      "name": "Tallinn on parem kui Tartu",
-      "desc": "Väga kõnekas provokatiivne stencil tekstiga \"Tallinn on parem kui Tartu\", mis jääb muuhulgas silma ka oma tehnilise oskamatuse poolest",
-      "lat": 58.381041,
-      "lon": 26.7245784,
-      "tag": "artworks"
-    },
-    {
-      "name": "Hallid Härrad",
-      "desc": "2011. a Stencibility tänavakunstifestivalil tehtud ühistöö, mille karakterid põhinevad lasteraamatu Momo illustratsioonidel. Tegemist on Hallide Härradega, kes varastavad inimeste aega väites, et nad on pankurid ja investeerivad seda. Samuti on näha ajaga hädas olevat Märtsijänest loost Alice Imedemaalt.",
-      "lat": 58.376102,
-      "lon": 26.721679,
-      "tag": "museums"
-    },
-    {
-      "name": "Psühhoteek",
-      "desc": "Teostus: Hapnik",
-      "lat": 58.3761779,
-      "lon": 26.7218073,
-      "tag": "architecture"
-    },
-    {
-      "name": "Rattasõit",
-      "desc": "Rattasõit/Bikeride2011. a Stencibility tänavakunstifestivalil tehtud ühistöö, mille karakterid põhinevad lasteraamatu Momo illustratsioonidel. Tegemist on Hallide Härradega, kes varastavad inimeste aega väites, et nad on pankurid ja investeerivad seda. Samuti on näha ajaga hädas olevat Märtsijänest loost Alice Imedemaalt.",
-      "lat": 58.3778408,
-      "lon": 26.7241161,
-      "tag": "live"
-    },
-    {
-      "name": "Thobek & Kashink",
-      "desc": "Dialoog kahe tänavakunstniku vahel, kes pole füüsiliselt ise kunagi kohtunud - Lätist pärit Thobek ja Prantsusmaalt pärit Kashink. NB! Tööd enam ei ole",
-      "lat": 58.3780907,
-      "lon": 26.7196673,
-      "tag": "bars"
-    },
-    {
-      "name": "Ouroboros",
-      "desc": "2012. aasta Stencibility tänavakunstifestivalil valminud teos \"Ouroboros\", mis kujutab lõputut lohe, kes sööb iseenda saba. Sobib seetõttu ideaalselt Väikse Tähetorni ümarale hoonele.",
-      "lat": 58.3792076,
-      "lon": 26.719721,
-      "tag": "artworks"
-    },
-    {
-      "name": "Käpiknukk mehe ja elevandiga",
-      "desc": "Väga detailne fotorealistlik stencil MinaJaLydia inimeste seeriast. http://minajalydia.tumblr.com",
-      "lat": 58.37624,
-      "lon": 26.722301,
-      "tag": "museums"
-    },
-    {
-      "name": "Okeiko & Hypnobooster",
-      "desc": "2013. aasta Stencibility tänavakunstifestivalil kahe Tallinna- põhise kunstniku Okeiko ja Hypnoboosteri koostöös valminud seinamaaling.\n\nwww.facebook.com/PlanetOkeiko",
-      "lat": 58.377919,
-      "lon": 26.720579,
-      "tag": "architecture"
-    },
-    {
-      "name": "KOOD",
-      "desc": "Üks paljudest MinaJaLydia koodidest linnapildis. Kood jätkub teisel hoonel. Selle lahendamise spikker on siin: http://www.ascii.cl/htmlcodes.htm",
-      "lat": 58.376108,
-      "lon": 26.719952,
-      "tag": "live"
-    },
-    {
-      "name": "Pintsel",
-      "desc": "Tallinna-põhine Pintsel on Tartut külastanud",
-      "lat": 58.3799821,
-      "lon": 26.719214,
-      "tag": "bars"
-    },
-    {
-      "name": "Miski pole olulisem",
-      "desc": "Sein, kus ilutses kaua aega tekst \"Miski pole olulisem, kui see lause\". ACTA seaduseelnõu vastase aktina \"tsenseeris\" Edward von Lõngus selle teksti, millest tekkis suur sõnavõtt ja diskussioon. Paar päeva hiljem tekkis alla uuesti tekst \"Miski pole olulisem, kui see lause\" lisalausega \"lootust on\"\n\nhttps://www.youtube.com/watch?v=ErexnKuwam8",
-      "lat": 58.3811535,
-      "lon": 26.723468,
-      "tag": "artworks"
-    },
-    {
-      "name": "Full solar is in our reach",
-      "desc": "Hulljulgelt kõrgel asuv 5m suurune tänavakunsti töö katlamaja korstna peal, mis propageerib päikeseenergia kasutamist. Making of: https://www.youtube.com/watch?v=SU27qvCXlvk",
-      "lat": 58.372856,
-      "lon": 26.7382872,
-      "tag": "museums"
-    },
-    {
-      "name": "Punkrock zombies",
-      "desc": "Üks vanimatest siiamaani säilinud Tartu grafititest. Joonistatud 1990ndate alguses.\n\nOne of the oldest surviving graffiti works in Tartu. Drawn in the beginning of 1990s.",
-      "lat": 58.372605,
-      "lon": 26.737706,
-      "tag": "architecture"
-    },
-    {
-      "name": "LEGO20",
-      "desc": "Kavand: Helen Marie Välja",
-      "lat": 58.3741103,
-      "lon": 26.7312041,
-      "tag": "live"
-    },
-    {
-      "name": "Minu % selles kunstis",
-      "desc": "Minu % selles kunstis",
-      "lat": 58.3796776,
-      "lon": 26.7307367,
-      "tag": "bars"
-    },
-    {
-      "name": "Jõeema",
-      "desc": "Tänu tänavakunstifestivalile Sõnum Seinal päevavalgust näinud töö \"Jõeema\"",
-      "lat": 58.3790941,
-      "lon": 26.7303492,
-      "tag": "artworks"
-    },
-    {
-      "name": "Minu ajastu sümbolid",
-      "desc": "Edgar Tedresaare loodud teos kahest presidendist - Lennart Meri ja Toomas Hendrik Ilves sillapostidel. Kurikuulsaks said portreed siis, kui ühel ööl tekkis Ilvese pea asemele Venemaa presidendi Vladimir Putini oma, mis pärast meediakära kaeti Guy Fawkesi maskiga. Lõpuks otsustas linn sekkuda ning praegu näeb sillapostidel lisaks Lennart Meri portreele vaid halli ristkülikut, mis katab kirjeldatut. ***Two presidents – Lennart Meri and Toomas Hendrik Ilves – on bridge pillars by Edgar Tedresaar. The portraits became notorious when one night Ilves's head was replaced with the head of Vladimir Putin, the president of Russia. After much media attention the head was covered with a Guy Fawkes mask and eventually the city decided to intervene, resulting in the grey rectangle opposite the portrait of president Meri. #stencibility2015 http://www.seitsmesed.ee/meelelahutus/uudis/2015/05/05/toomas-hendrik-ilvesest-sai-uleoo-vladimir-putin/",
-      "lat": 58.3706083,
-      "lon": 26.7413878,
-      "tag": "museums"
-    },
-    {
-      "name": "Sõpruse sild",
-      "desc": "Sillaalune, kus pea iga posti pealt leiab silmailu.\n\nAn area under the bridge where almost every pillar offers some eye candy.",
-      "lat": 58.371343,
-      "lon": 26.742997,
-      "tag": "architecture"
-    },
-    {
-      "name": "Live fast, die young",
-      "desc": "Noor ema imetab last heroilises Madonna-lapsega motiivis, õla peale tatoveeritud \"live fast, die young\" #minajalydia #stencil\n\nA young mother with a shoulder tattoo \"live fast, die young\" nurses her infant in the heroic Madonna and child motif. #minajalydia #stencil",
-      "lat": 58.382184,
-      "lon": 26.722733,
-      "tag": "live"
-    },
-    {
-      "name": "Vabaduse Galerii",
-      "desc": "Mõlemal pool Vabaduse silda on alates 2010 aastast suur isetekkeline tänavakunstiteoste kogum, mis täieneb aegamisi ning mida on hakatud nimetama Vabaduse Galeriiks või Tartu Linnagaleriiks.\n\n2013 suvel otsustas Tartu Linnavalitsus sillaluse puhastada, kuid valikuliselt- jättes \"ilusa\" alles. (http://www.tartupostimees.ee/1244980/soodapritsimehed-valivad-kunsti)\n\nGallery at Vabaduse Bridge (Freedom Gallery)\nOn the both sides of Vabaduse (Freedom) Bridge there spans a large spontaneous mass of street art works, gradually developing. It has come to be known as the Freedom Galley or Tartu City Gallery.",
-      "lat": 58.385389,
-      "lon": 26.72419,
-      "tag": "bars"
-    },
-    {
-      "name": "Vabaduse Galerii",
-      "desc": "Mõlemal pool Vabaduse silda on suur isetekkeline tänavakunstiteoste kogum, mis täieneb aegamisi ning mida on hakatud nimetama Vabaduse Galeriiks või Tartu Linnagaleriiks.\n\n2013 suvel otsustas Tartu Linnavalitsus sillaluse puhastada, kuid valikuliselt- jättes \"ilusa\" alles. http://www.tartupostimees.ee/1244980/soodapritsimehed-valivad-kunsti\n\nGallery at Vabaduse Bridge (Freedom Gallery)\nOn the both sides of Vabaduse (Freedom) Bridge there spans a large spontaneous mass of street art works, gradually developing. It has come to be known as the Freedom Galley or Tartu City Gallery.",
-      "lat": 58.384921,
-      "lon": 26.723581,
-      "tag": "artworks"
-    },
-    {
-      "name": "Anton Hansen Tammsaare",
-      "desc": "Edward von Lõnguse versioon Anton Hansen Tammsaarest, kes on jäänud töötuks pärast koondamist 25 krooni rahatähe pealt, kui Eestis euro käibele võeti. Tekkis tänavatele koos Koidulaga (http://evl-genius.blogspot.com/2011/02/blog-post.html).\n\nKoidula ja Tammsaare teos lõuendil püstitas 2012a kevadel Tartu noore kunsti oksjonil rekordi saavutades lõpphinnaks 1200 eurot. (http://evl-genius.blogspot.com/2013/05/oksjonirekord.html\n\nEdward von Lõngus' version of Anton Hansen Tammsaare, a classic in Estonian literature, who has become unemployed after being laid off from the 25 kroon note, along with the coming of euro notes.",
-      "lat": 58.381579,
-      "lon": 26.723223,
-      "tag": "museums"
-    },
-    {
-      "name": "Pingid",
-      "desc": "Edward von Lõnguse poolt elavdatud pingid Tartu Linnaraamatukogu ees.\n\nhttp://evl-genius.blogspot.com/2013/04/tartu-pm-tanavakunstnik-kaunistas.html",
-      "lat": 58.381528,
-      "lon": 26.723406,
-      "tag": "architecture"
-    },
-    {
-      "name": "Backbone'i tagune",
-      "desc": "Siit hoovist leiab huvitava assortii Pintsli, Hapniku, Sänki ja Medley töödest.\n\nThis court yard behind Backbone tattoo salon hosts an interesting collection of works by Pintsel, Hapnik, Sänk and Medley.",
-      "lat": 58.386785,
-      "lon": 26.727915,
-      "tag": "live"
-    },
-    {
-      "name": "Sirp",
-      "desc": "Ajalehest Sirp volditud laevuke, mida näeb vaid mõõna ajal. #edwardvonlõngus\n\nA boat folded from the culture newspaper Sirp, the stencil is only seen at low tide. #edwardvonlõngus",
-      "lat": 58.3847138,
-      "lon": 26.7236584,
-      "tag": "bars"
-    },
-    {
-      "name": "Emajõe veemõõtja",
-      "desc": "Vabaduse silla all seisab poiss keda on näha täpselt nii palju, kui Emajõgi teda näitab. #hapnik\n\nThere's a boy standing under the Freedom Bridge who you can see as much the river Emajõgi let's you. #hapnik #water_measurer",
-      "lat": 58.3853086,
-      "lon": 26.7241225,
-      "tag": "artworks"
-    },
-    {
-      "name": "Please let me love something else than money",
-      "desc": "Üks vanimaid siiani säilinud tänavakunstitöid Tartus. Selle sotsiaalkriitilise töö autor on Soome kunstnik Tiitus Petäjäniemi.\n\nOne of the oldest surviving street art works in Tartu. The author of the socially critical work is a Finnish artist named Tiitus Petäjäniemi.\n\n http://tiituspetajaniemi.blogspot.com",
-      "lat": 58.3828874,
-      "lon": 26.719351,
-      "tag": "museums"
-    },
-    {
-      "name": "Genialistide Klubi",
-      "desc": "Subkultuurimaja ees ja sees leidub päris huvitavat kraami, isegi wc seinte jaoks on eraldi kuraator. Treppide juures on 2012. aasta Stencibilityl valminud Satinka teos.\n\nThere's a lot of interesting stuff in and outside of the subculture house, even the toilet walls have its own curator. By the stairs there is a work made by Satinka at 2012 year Stencibility.",
-      "lat": 58.3835263,
-      "lon": 26.7219887,
-      "tag": "architecture"
-    },
-    {
-      "name": "Magasini tänav",
-      "desc": "Aja jooksul on piki Magasini tänavat tekkinud ilus kollaaž erinevatest stenclitest, kleepsudest, plakatitest, grafitist, tag'idest.",
-      "lat": 58.383066,
-      "lon": 26.721539,
-      "tag": "live"
-    },
-    {
-      "name": "MINAROTT",
-      "desc": "MINAROTT\nSINAROTT\nMEIE EI OLE ROTID\nROTID EI OLE MEIE",
-      "lat": 58.3834867,
-      "lon": 26.7194656,
-      "tag": "bars"
-    },
-    {
-      "name": "Taimed",
-      "desc": "Krempel kohviku hoovis",
-      "lat": 58.3815851,
-      "lon": 26.7213121,
-      "tag": "artworks"
-    },
-    {
-      "name": "Kogum",
-      "desc": "Erinevad autorid",
-      "lat": 58.3861804,
-      "lon": 26.7206927,
-      "tag": "museums"
-    },
-    {
-      "name": "Kummitus ja seenmees",
-      "desc": "Mis riideid te seal Tallinnas kannate?",
-      "lat": 58.3862223,
-      "lon": 26.7187556,
-      "tag": "architecture"
-    },
-    {
-      "name": "Kogum",
-      "desc": "Erinevad kunstnikud",
-      "lat": 58.3848761,
-      "lon": 26.7250409,
-      "tag": "live"
-    },
-    {
-      "name": "Käppadele kukkuv kass",
-      "desc": "Kavand: Kudrun Vungi\nTeostus: Mihkel Joala, Kerttu Kuslap, Robot AI-Bert\n23",
-      "lat": 58.3825857,
-      "lon": 26.7282762,
-      "tag": "bars"
-    },
-    {
-      "name": "Tume unenägu",
-      "desc": "Tume unenägu/ Dark dream",
-      "lat": 58.3861549,
-      "lon": 26.7210449,
-      "tag": "artworks"
-    },
-    {
-      "name": "Alberti ulmemehed / Albert's sci-fi men",
-      "desc": "MinaJaLydia (http://minajalydia.tumblr.com) loomingu üks esimesi töid.",
-      "lat": 58.382402,
-      "lon": 26.722795,
-      "tag": "museums"
-    },
-    {
-      "name": "Elumeretuuker",
-      "desc": "Elumeretuuker legendaarse baari Zavood ees.",
-      "lat": 58.383595,
-      "lon": 26.719549,
-      "tag": "architecture"
-    },
-    {
-      "name": "Sillaalune lennuliiklus",
-      "desc": "Lennuliiklust reguleeriv liiklusmärk, mis on olnud selle koha peal nii kaua, et keegi ei märkagi, et midagi valesti oleks. #müra2000\n\nObservant passers-by may notice an unorthodox traffic sign. #müra2000 https://mra2000.carbonmade.com/",
-      "lat": 58.386508,
-      "lon": 26.722183,
-      "tag": "live"
-    },
-    {
-      "name": "Salvador Dali",
-      "desc": "Autor Hapnik (http://hapnik.blogspot.com/2011/05/salvador-is-watching.html)",
-      "lat": 58.3832185,
-      "lon": 26.7207509,
-      "tag": "bars"
-    },
-    {
-      "name": "Lõvi hüpe",
-      "desc": "Lõvi hüpe/ Lion jump",
-      "lat": 58.3900784,
-      "lon": 26.7270812,
-      "tag": "artworks"
-    },
-    {
-      "name": "Thobek",
-      "desc": "Töö nimega \"Half Andrey\" Läti tänavakunstnikult Thobek.\n\nA piece \"Half Andrey\" by Thobek, a street artist from Latvia.",
-      "lat": 58.38316,
-      "lon": 26.733786,
-      "tag": "museums"
-    },
-    {
-      "name": "Haiguste ravi. Kontrollitud.",
-      "desc": "Ülo Kiple mälestuseks",
-      "lat": 58.3828717,
-      "lon": 26.7386687,
-      "tag": "architecture"
-    },
-    {
-      "name": "Koos koos koos",
-      "desc": "Koos koos koos/ All together now",
-      "lat": 58.3890376,
-      "lon": 26.7328345,
-      "tag": "live"
-    },
-    {
-      "name": "Kodu",
-      "desc": "Kodu/ Home",
-      "lat": 58.3945451,
-      "lon": 26.7189764,
-      "tag": "bars"
+      "name": "Jardins De La Guardia Civil",
+      "desc": "A linear neighborhood park along Calle Guàrdia Civil that includes Benimaclet’s dedicated dog\npark . This green strip (about 6,449 m² in total) was upgraded in 2017 with a fenced dog\nsocialization area ~305 m² in size , equipped with benches, a dog water fountain, waste bag\ndispensers, and a double-gated entry. Locals gather here in the evenings to let their pets play\noff-leash . The park also has children’s playground sections and walkways, making it a lively\ncommunity spot.",
+      "lat": 39.49465,
+      "lon": -0.362515,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "Torre Miramar",
+      "desc": "When Valencia's city planners envisioned Torre Miramar, they dreamt big: a futuristic metal tower anchoring a traffic circle by Benimaclet, offering panoramic sea views and symbolizing the city’s modern ambitions. It reflected the era’s confidence, just before the Great Recession hit, and embodied a hopeful belief that bold architecture could strengthen the city’s profile and inspire civic pride.\n\nBut timing can betray even the best of intentions. The lift failed, the view underwhelmed, and the world’s focus shifted to austerity. Within months, the tower was closed. No official plans have emerged to bring it back, and today, it stands weathered and forgotten by many.\n\nAnd yet, it endures.\n\nTorre Miramar is still there, tall, strange, quietly dignified, watching over the rhythm of the city it was built to honor. Maybe the moment was wrong. Maybe the vision was ahead of its time. But perhaps, like the best of dreams, it’s just waiting for the right time… for its day to shine.",
+      "lat": 39.4815,
+      "lon": -0.352,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Museo D'informatica",
+      "desc": "You wouldn’t know it was a museum unless someone told you.\n\nAt the edge of the UPV campus, inside a plain-looking university building, sits the Museum of Informatics. No flashy entrance, no ticket desk. Just a hallway, filled with relics. Not behind glass, but right there beside classrooms, where students rush past vintage punch-card machines and early IBM systems without a second glance.\n\nIt started in 2001, built from donated machines and the quiet obsession of people who didn’t want this stuff forgotten. Over time, it became a proper museum, recognized by the city and ICOM, but it never lost that scrappy, alive feeling. It doesn’t exist to show off. It exists because someone cared.\n\nAnd if you wander in, maybe carrying some old e-waste as your “entry ticket,” you’ll find a place that’s still evolving. Old machines next to new ideas. Past and present sharing a corridor.\n\nIt’s not about nostalgia. It’s about continuity.\nAnd you’re allowed to touch it.",
+      "lat": 39.481754,
+      "lon": -0.340852,
+      "tags": [
+        "museums",
+        "education"
+      ]
+    },
+    {
+      "name": "Las Barracas De Panach",
+      "desc": "19th-century traditional houses in the huerta. On Camí de\r\nFarinós just north of the built-up barrio stand two rare twin barraca cottages . Built in the 1800s, these thatched-roof rural houses (once owned by the Panach family) are one of the few\r\nsurviving examples of classic Valencian barraca architecture in the city . They have a bit of recent lore as well, years of abandonment led to squatters moving in with fighting roosters, earning them a local reputation as a “wild west” corner of Benimaclet . Though now protected as cultural heritage, they fell into disrepair until emergency repairs in 2021 saved them from collapse . Intrepid visitors can view these rustic cottages (from outside) to get\r\na feel for Valencia’s agrarian past and imagine the stories of those who lived, and illicitly occupied.",
+      "lat": 39.498363,
+      "lon": -0.358559,
+      "tags": [
+        "historic"
+      ]
+    },
+    {
+      "name": "Solar Maria",
+      "desc": "For over forty years, the lot on Carrer de Puçol 12 sat quiet. A fenced-off patch of land in Benimaclet, overgrown and forgotten. People passed it daily, barely noticing the toys collecting dust, the broken furniture, the stubborn fig tree that sprouted through the rubble. It had a history, like most spaces in Benimaclet, but no clear future.\n\nThen came October 2016. The neighborhood was buzzing with the Benimaclet Confusion Festival, a grassroots celebration of art, music, and community. That year, instead of just filling streets and bars, a group of organizers decided to give something back: they cut the locks, cleared the junk, and reopened the space as Solar María.\n\nNeighbors showed up with shovels, paint, and instruments. In two days, the lot transformed. It became a place to sit, to plant, to perform. They hosted concerts and workshops, told stories under string lights, and for a weekend, the forgotten land felt alive again. Not polished or permanent, but hopeful, reborn through collective care.\n\nSolar María didn’t try to be grand. It just asked a question:\nWhat if the spaces we walk past every day could belong to us again?\n\nAnd even if it was temporary, the memory stuck. A reminder that in Benimaclet, even an empty lot can turn into something beautiful if people show up.",
+      "lat": 39.495059,
+      "lon": -0.364101,
+      "tags": [
+        "live",
+        "food"
+      ]
+    },
+    {
+      "name": "Placa Amparo Arce",
+      "desc": "A small neighborhood park (about\r\n2,420 m²) created by the community on a former vacant lot . It’s tucked inside the block\r\nbetween Avenida Valladolid and the streets Poeta Ricardo San Martí, Masquefa, and Sant\r\nColumbà . Named in honor of a beloved local activist, this plaza has playground equipment,\r\nbenches, and plenty of greenery after its transformation from an empty plot into a green oasis",
+      "lat": 39.495101,
+      "lon": -0.362855,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "Terror Stories by Experiencecity Escape Room",
+      "desc": "Terror Stories by Experiencity isn’t a regular escape room. It’s an experience built like a horror film, where you and your friends take the lead role. One of the most intense rooms is Paranoia, where you’re sent into a crumbling asylum with a dark past. The walls whisper. The lights stutter. And the choices you make shift the story’s ending.\n\nThe set design is immersive. The staff guide you without breaking the tension. And the fear? Real enough that players have walked out shaking, grinning, and booking the next room.\n\nWhile the city center is packed with museums and landmarks, this is something you’ll actually feel. It’s walkable from your place in Benimaclet. No long lines. No crowds. Just a hauntingly good time, built by locals who love scaring the hell out of you.\n\nFor anyone looking to do something different, this is a memory you’ll talk about long after your trip is over.",
+      "lat": 39.492351,
+      "lon": -0.363198,
+      "tags": [
+        "museums"
+      ]
+    },
+    {
+      "name": "Jardín de la Calle Murta",
+      "desc": "A newly opened urban pocket park on Calle de la Murta in Benimaclet. This 1,119 m² garden was completed in 2023 as a response to local residents’ requests.\nIt features two separate play areas (for different child age groups) and outdoor exercise stations for seniors, while preserving most of the existing mature trees on the site. It’s an inviting stop for families and anyone looking to relax under the shade.",
+      "lat": 39.49441,
+      "lon": -0.362948,
+      "tags": [
+        "park",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Huertos Urbanos de Benimaclet",
+      "desc": "Literally the community urban gardens of Benimaclet, this is a hidden green oasis that locals reclaimed from an abandoned lot. Tucked behind a fence at Carrer Poetes Anònims 10, the Huertos Urbanos project consists of small allotments where neighbors rent plots to grow organic vegetables (lettuce, beans, artichokes—you name it).\nIt’s a vibrant communal space that unites residents: there’s a shared area with benches, a Moorish bread oven, a little playground, and even chickens, ducks and friendly cats roaming about.",
+      "lat": 39.497078,
+      "lon": -0.361625,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "Molí de Farinós",
+      "desc": "A 19th-century flour mill situated on the northeastern border of Benimaclet’s huerta, marking the boundary between Valencia and the town of Alboraya.\nYou can reach this historic mill by following a farm lane (Camí de Farinós) out of Benimaclet, crossing under the highway. Though the building is not operational, it stands as a rustic landmark amid the fields, evoking the area’s agricultural heritage.",
+      "lat": 39.498085,
+      "lon": -0.359904,
+      "tags": [
+        "historic",
+        "sport"
+      ]
+    },
+    {
+      "name": "CSOA l’Horta",
+      "desc": "Hidden on the edge of Benimaclet, down a quiet lane surrounded by orchards, you’ll find CSOA L’Horta — an anarchist, self-managed social center that’s become a landmark of local resistance and underground culture. The name stands for Centro Social Okupado y Autogestionado, and it was born in 2012 when activists reclaimed an abandoned flower nursery and turned it into a living space for community, protest, and creation.\n\nSince then, L’Horta has evolved into a vibrant hub for Valencia’s counterculture. Murals shout anti-gentrification messages, veggie gardens grow under the care of volunteers, and a restored farmhouse hosts concerts, documentary nights, community dinners, and skill-share workshops. There’s even a radical library — all run by and for the people.\n\nIn December 2020, L’Horta made headlines when police tried to evict the squat. Hundreds of neighbors stood in defense, reoccupied the site, and ultimately won the right to stay. That standoff cemented L’Horta’s place as a symbol of grassroots resistance in Benimaclet.\n\nIf you’re curious about the beating heart of the barrio’s activist soul, check their Instagram for open events. And even if it’s closed, just walking past its graffiti-covered walls on Carrer de Diógenes López Mechó (by the orchards near Camí de Vera) gives you a glimpse of a different kind of Valencia — raw, real, and still fighting.",
+      "lat": 39.497072,
+      "lon": -0.364901,
+      "tags": [
+        "artworks",
+        "live",
+        "park",
+        "education"
+      ]
+    },
+    {
+      "name": "Estudio 64",
+      "desc": "An illustration-focused bookshop and art gallery on Plaza de Benimaclet. Opened in 2014, it’s the only bookstore in Valencia specializing in illustration.\nAbout 90% of their books are beautifully illustrated editions, art books or graphic novels. You’ll also find design goods – from wooden toys and art prints to hand-painted ceramics and illustrated tote bags – plus a gallery space with monthly art exhibitions. Estudio 64 often holds workshops, talks, and a book club.",
+      "lat": 39.494692,
+      "lon": -0.361788,
+      "tags": [
+        "museums",
+        "live",
+        "park"
+      ]
+    },
+    {
+      "name": "Casa del Trencadís (Mosaic Tile House)",
+      "desc": "A “trencadís” (a traditional Valencian technique using broken ceramic pieces to create mosaics) house on Carrer de la Murta, famous for its decorative façade of broken-ceramic tilework. On the ground floor is El Colmado, a local bar that gives the building its nickname. \nIt was even immortalized in Pedro Almodovar's Bad Education.\nWhy visit: This eye-catching house is one of the neighborhood’s most iconic buildings. The vibrant tile mosaics exemplify traditional Valencian artistry, making it a cool photo stop – and you can even pop into the bar for a drink to soak up the village atmosphere",
+      "lat": 39.494935,
+      "lon": -0.361435,
+      "tags": [
+        "food",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Residencial Espai Verd",
+      "desc": "Residencial Espai Verd – A bold and unconventional housing complex built in the 1980s, designed by architect Antonio Cortés Ferrando.\nAddress: Carrer de la Murta, 25, 46020 Valencia.\nWhy visit: If Gaudí, a concrete bunker, and the Hanging Gardens of Babylon had a baby, it would look like Espai Verd. You can’t go inside (it’s private), but it’s worth walking by. It looks like a futuristic jungle — layers of concrete terraces with built-in vegetation, circular windows, and hanging gardens. It’s a classic example of Valencian postmodern architecture and is still inhabited. The contrast between this brutalist green maze and the village vibe of Benimaclet makes it a unique visual landmark.",
+      "lat": 39.49404,
+      "lon": -0.36239,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "Centro Instructivo Musical de Benimaclet (CIM)",
+      "desc": "Known locally as El Musical, the CIM Benimaclet is the neighborhood’s community music society and cultural center, founded in 1910.\nHoused in a historic casino-style building on the old village main street, it operates a music school and is home to a beloved concert band and orchestra that have been part of Benimaclet’s identity for over a century.\nBeyond music classes, the center’s grand salon and bar serve as a gathering place for the community – many local cultural events, book presentations, art expos and talks are hosted here, since Benimaclet has no official civic center.",
+      "lat": 39.495163,
+      "lon": -0.362842,
+      "tags": [
+        "live",
+        "food",
+        "education",
+        "historic"
+      ]
+    },
+    {
+      "name": "Teatro Círculo",
+      "desc": "A small independent theatre tucked away on a side street, Teatro Círculo has been bringing the performing arts to Benimaclet since 1993. Its resident company produces contemporary plays with a social conscience, improvisation shows, and experimental theater in an intimate black-box venue . With around 60–80 seats, it offers an up-close theatre experience at affordable prices (they often have discounts for students or weeknight shows ). The exterior of the theater is also notable – its facade features large street murals painted during local art festivals , making it a minor attraction for street-art lovers as well. Visitors interested in Valencia’s offbeat arts scene will find Teatro Círculo a welcoming spot to catch an alternative play or improv night alongside the local crowd.",
+      "lat": 39.49487,
+      "lon": -0.36532,
+      "tags": [
+        "artworks",
+        "live"
+      ]
+    },
+    {
+      "name": "Kaf Café",
+      "desc": "– A favorite local hangout, Kaf Café is not just a café/bar but “an oasis of culture and relaxation” in Benimaclet . By day it’s a chill café and community library – you can grab a book off the shelf or admire an art exhibit on the walls – and by night it turns into a lively artsy bar with events. Kaf Café hosts a little of everything: open-mic poetry nights, trivia quizzes, live music or DJ sessions, and more . There’s even a piano inside and occasional impromptu jam sessions. The atmosphere is bohemian and inclusive, attracting students, creatives, and neighbors alike. It’s the kind of place where you might sip a craft beer or coffee while listening to a poetry slam or indie concert – perfect for soaking up Benimaclet’s alternative vibe",
+      "lat": 39.494755,
+      "lon": -0.361408,
+      "tags": [
+        "museums",
+        "live",
+        "food",
+        "education"
+      ]
+    },
+    {
+      "name": "El Chico Ostra (Bookshop-Café)",
+      "desc": "El Chico Ostra (named after Tim Burton’s “Oyster Boy”) is a\r\ncozy bookstore-café and cultural space nestled in the old quarter of Benimaclet. Opened in\r\n2010, it’s a quiet, inviting spot to have an afternoon drink or coffee surrounded by second-hand\r\nbooks and local art – the walls usually feature rotating exhibitions of paintings or photography\r\n. True to its literary spirit, the café often organizes cultural and foodie activities, like poetry\r\nreadings, small concerts, craft markets or tasting events . There’s a bohemian charm inside\r\nwith vintage decor and shelves of books (which you can buy or just browse). Many consider it\r\n“much more than just a bar” – it’s part of the soul of the neighborhood. (Note: As of 2025, doublecheck it’s open, as management can change.)",
+      "lat": 39.494189,
+      "lon": -0.362084,
+      "tags": [
+        "artworks",
+        "museums",
+        "live",
+        "food",
+        "retail"
+      ]
+    },
+    {
+      "name": "Café Piano de L’Alba",
+      "desc": "This unassuming café-bar (often just called Café de L’Alba) hides a\r\ndelightful surprise: a beautiful wooden grand piano in the corner, which comes to life with free\r\nlive piano concerts every Friday evening . L’Alba is a longtime neighborhood café with a relaxed,\r\nartsy ambiance – the decor has a vintage Valencian touch – and it draws a diverse crowd. On\r\nFriday nights the lights dim and you can enjoy classical or jazz pieces on the piano for the price\r\nof a coffee or beer. It’s a perfect place to unwind with a drink and soak in some intimate live\r\nmusic without any cover charge . The rest of the week it’s a quiet spot for a morning coffee\r\nor evening copa, but those Friday piano nights give it a special cultural flair",
+      "lat": 39.494063,
+      "lon": -0.362647,
+      "tags": [
+        "live",
+        "food"
+      ]
+    },
+    {
+      "name": "Ermita de Vera (Vera Hermitage and Mill)",
+      "desc": "Medieval hermitage with a miracle legend. This rural chapel traces its\r\norigins to the 15th century, when (as legend has it) an image of the Virgin was miraculously\r\nfound at the spot and inspired the Dominicans to build a shrine . The current hermitage was\r\nrebuilt in the 18th century and stands next to an old water mill, sharing a porch and even a\r\nnatural spring (“el Clot de Vera”) that once fed the mill . The Ermita de Vera is a tranquil little\r\ncomplex – now officially part of a “Plaza de la Ermita i Molí de Vera” – where one can sense\r\nValencia’s past: a sacred wellspring, a revered image (now called the Inmaculada Concepción de\r\nVera) and centuries of local pilgrimage . It’s also the endpoint of Benimaclet’s annual “Passà”\r\nprocession during the patron festivals , making it a living piece of local tradition",
+      "lat": 39.490949,
+      "lon": -0.34058,
+      "tags": [
+        "park",
+        "religious"
+      ]
+    },
+    {
+      "name": "Alquería de la Purísima",
+      "desc": "18th-century farmhouse (now a day center). This restored historic\r\nfarmhouse was built in the 1700s in traditional Valencian huerta style . Local families pass\r\ndown a legend that under one of its staircases a hidden treasure lies buried . While the\r\ntreasure remains a rumor, the house itself is interesting for its architecture and the ceramic panel\r\nof the Virgin on its facade . Visitors can appreciate its preserved rustic charm and imagine the\r\nlore of secret gold once concealed within its walls",
+      "lat": 39.4979,
+      "lon": -0.358,
+      "tags": [
+        "historic"
+      ]
+    },
+    {
+      "name": "Alquería Martí (Casa Cafís / Chalet Vista Alegre)",
+      "desc": "A grand early-20th-century house of the\nMartí family, built in the Valencian modernist style . Located by a small garden along Calle\nGuardia Civil, it has been fully rehabilitated and now hosts the Municipal District offices (Junta\nMunicipal) for the area . \nWhy visit: With its Art Nouveau charm and history as a bourgeois family’s country villa , this building stands out amidst modern blocks. It’s a picturesque relic of\nBenimaclet’s past, now accessible to the public for civic services.",
+      "lat": 39.4975,
+      "lon": -0.361,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "Cementerio Parroquial de Benimaclet",
+      "desc": "Historic graveyard with an old-world\naura. Tucked along the Camí de Les Fonts is the walled Cementerio de Benimaclet, a small\nburial ground that has served the community since at least the 17th century . Remarkably, it\nis “one of the last parish cemeteries still remaining” in Spain , since most such graveyards were\nmoved or closed long ago. Inside its whitewashed walls are rows of nicho vaults and tombs of\nlocal families, a quiet testament to the barrio’s past generations . There may not be\r\nfamous names here, but one notable relic was the grave slab of a medieval convert (now kept at\r\nthe church) . With cypress trees and weathered headstones, the place has a contemplative,\r\nslightly gothic atmosphere. Visitors with an interest in “off the beaten path” sites or genealogical\r\nhistory might find it intriguing to see how a village cemetery from bygone days survives amidst\r\nthe modern city – a gentle reminder of mortality and tradition (“al fin y al cabo, allí nos\r\nreuniremos todos” jokes one local",
+      "lat": 39.497893,
+      "lon": -0.364781,
+      "tags": [
+        "religious",
+        "historic"
+      ]
+    },
+    {
+      "name": "Tulsa Café (Antigua Casa de Juan Giner) –",
+      "desc": "A popular café and bar set in a preserved old house\non Calle Juan Giner . The building retains the charm of a traditional dwelling, repurposed as a\nhip gathering spot. \nWhy visit: Tulsa Café is a living example of Benimaclet’s character – an antique home turned bohemian hangout. Locals\nknow it well , and visitors can enjoy its vintage architecture alongside coffee or cocktails,\nmaking history a bit more delicious.",
+      "lat": 39.493984,
+      "lon": -0.363219,
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "name": "Diego Mir’s Artichoke Mural",
+      "desc": "A famous piece of street art on Carrer d’Alegret. It’s a large\r\nmural of an artichoke created by local artist Diego Mir, which has become a symbol of the Per\r\nl’Horta social movement to protect Valencia’s orchards. Why visit: Benimaclet is sprinkled with colorful\r\nmurals in unexpected corners , and this particular artwork stands out for its meaning – the\r\nartichoke mural celebrates the neighborhood’s agricultural roots and community activism,\r\noffering a unique backdrop for photos and a story to discover",
+      "lat": 39.494481,
+      "lon": -0.363123,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "Escuela Meme (Cultural Alquería)",
+      "desc": "A dilapidated old alquería at Calle Poeta Ricard Sanmartí\r\nNo. 17, currently being restored and repurposed by a cultural collective . The group “Escola\r\nMeme” is transforming this abandoned farmhouse into a self-managed arts and education\r\nspace. \nWhy visit: It’s another example of locals fighting to save their heritage – you might see work-in-progress murals or\r\ncommunity gardens around it. This spot gives visitors a sense of “living history”, where the past\r\n(an old rural house) is literally under renovation to serve the present as a creative hub",
+      "lat": 39.492,
+      "lon": -0.3635,
+      "tags": [
+        "artworks",
+        "park",
+        "historic"
+      ]
+    },
+    {
+      "name": "Alquería de Serra",
+      "desc": "A majestic old farmhouse standing next to the Benimaclet cemetery,\r\ndocumented as far back as 1695 . The existing structure is believed to date from the 18th\r\ncentury . It is protected (listed as a Bien de Relevancia Local) but currently lies in ruins due to\r\nlong neglect \nWhy visit: Surrounded by surviving orchards, this grand yet crumbling alquería evokes\r\nthe “ghosts” of Valencia’s rural past. Its imposing walls and gated courtyard (visible through\r\nthe fence) tell of a bygone era – and the ongoing grassroots campaigns to save it add a layer of\r\nhuman drama to the site",
+      "lat": 39.485351,
+      "lon": -0.349781,
+      "tags": [
+        "historic"
+      ]
+    },
+    {
+      "name": "“Bosque Multicolor” Mural by Juan Conde",
+      "desc": "A bright, nature-inspired graffiti mural (a multicolor forest) by Uruguayan artist Juan Conde. \r\nWhy visit: It brings a burst of colorful nature imagery into the city, reflecting the artist’s idea of\r\n“windows to a city’s inner nature.”",
+      "lat": 39.49507,
+      "lon": -0.363562,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "Illustration Mural by Ós Gat",
+      "desc": "A delicate illustration-style mural on a white background \nWhat it is: A piece by artist Ós\r\nGat exploring emotions and vulnerability. Why visit: Its subtle, introspective art contrast with the\r\npublic street, a little hidden gem for art lovers.",
+      "lat": 39.493943,
+      "lon": -0.362236,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "Meme-Inspired Mural by J. Warx",
+      "desc": "A witty graffiti mural by local artist J. Warx What it is: J. Warx is a famous Benimaclet street artist known for social\r\ncommentary; this mural riffs on an internet meme with a clever message (his previous piece here\r\nhumorously depicted a Fallas 2020 outfit with COVID themes). Why visit: It’s a piece of local\r\nstreet-art lore that captures the neighborhood’s humor and activism.",
+      "lat": 39.494066,
+      "lon": -0.362323,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "“Wonder Woman” Mural by Zarva Barroso",
+      "desc": "A comic-book style mural in the Sant Mateu alley\r\n(next to J. Warx’s piece) . What it is: Part of Zarva’s “Wonder Women” project, it portrays an\r\ninspiring local woman (Marlo, a community organizer) as a superheroine. \nWhy visit: It’s bold and\r\nempowering, featuring a QR code that links to the real-life story behind the character – a perfect\r\nmix of street vibe and social message.",
+      "lat": 39.493893,
+      "lon": -0.362725,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "“Misticismo” Mural by Inma Carpena & Media",
+      "desc": "A colorful, collaborative mural by two artists,\r\nfound just off the Plaza de Benimaclet (in the alley by the Social Services center) . \nWhat it is: A vibrant piece infused with mystical, cosmic imagery (born from the artists’ shared interest in astrology and spirituality). \nWhy visit: Its kaleidoscope of colors and dreamy figures make for great photos, and it exemplifies Benimaclet’s community-driven art (created during the conFusión festival).",
+      "lat": 39.493844,
+      "lon": -0.362772,
+      "tags": [
+        "artworks",
+        "park"
+      ]
+    },
+    {
+      "name": "“La Mirada al Cielo” Mural by Xemayo",
+      "desc": "A striking portrait mural by Xemayo, at the foot of an old water deposit tower . \nWhat it is: A close-up of a pensive woman gazing upward through painted foliage, cleverly positioned under\r\nthe real water tower above. \nWhy visit: The juxtaposition of art and industrial heritage is unique –\r\nthe mural’s upward gaze leads your eyes to the historic tower, blending micro detail with a minilookout vibe in the street.",
+      "lat": 39.494087,
+      "lon": -0.362991,
+      "tags": [
+        "artworks",
+        "historic"
+      ]
+    },
+    {
+      "name": "Deih Mural at Ultramarinos Javi",
+      "desc": "A large sci-fi style mural by renowned Valencian street artist\r\nDeih on the wall of Ultramarinos Javi (a local grocery). \nWhat it is: Deih’s signature futuristic figures in bold lines and hues. Why visit: Deih is one of Valencia’s most famous street artists , and catching his work in its native setting (on a humble shop in\r\nBenimaclet) is a real treat for street-art fans.",
+      "lat": 39.494146,
+      "lon": -0.363212,
+      "tags": [
+        "artworks",
+        "retail"
+      ]
+    },
+    {
+      "name": "“Corazón Eléctrico” (Electric Heart) by Gerbos",
+      "desc": "A colorful graffiti piece by artist Gerbos,\r\nWhat it is: A spray-painted mural (on a rollup shutter) depicting a female figure with a bursting heart of nature. \nWhy visit: Gerbos is a regular contributor to Benimaclet’s urban art scene; this piece’s vibrant style and hidden placement on a\r\nside street give it that street treasure feeling.",
+      "lat": 39.493758,
+      "lon": -0.362679,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "“El Rey Buitre” (Vulture King) by Toni Espinar",
+      "desc": "What it is: A dramatic image (presumably featuring a vulture, true to its name) by Valencian muralist Toni Espinar. \nWhy visit: It’s a bit off the beaten path, but discovering it rewards you with an example of local socio-political art (Espinar often weaves commentary into his work) and a sense of urban exploration in Benimaclet’s quieter corners.",
+      "lat": 39.494003,
+      "lon": -0.363155,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "“El Perro y su Amo” (The Dog and His Master) by Xolaka",
+      "desc": "A mural by street artist Xolaka. \nWhat it is: The title suggests a playful or ironic scene between a dog and owner. \nWhy visit: Xolaka’s works are popular around Valencia; finding this piece gives insight into the neighborhood’s blend of humor and art in everyday alleyways. Plus, Rafael Tramoyeres street leads toward the huerta (farmland), so you get a scenic walk.",
+      "lat": 39.494031,
+      "lon": -0.362932,
+      "tags": [
+        "artworks"
+      ]
+    },
+    {
+      "name": "“Círculos” Mural at Teatro Círculo",
+      "desc": "A circular-pattern mural adorning the facade of the independent Teatro Círculo (theater)\nWhat it is: A collaborative street artwork (by artists H. Dogs, Inma Carpena, et al.) featuring interlocking circles. \nWhy visit: Not only can you catch alternative theater here, but the building itself is a piece of art. It’s a micro detail of Benimaclet’s artsy spirit – even the local theater’s exterior is an urban\r\ncanvas!",
+      "lat": 39.49487,
+      "lon": -0.36532,
+      "tags": [
+        "artworks",
+        "live"
+      ]
+    },
+    {
+      "name": "Calle Alegret",
+      "desc": "One of the oldest streets in the historic center of Benimaclet. Don’t let its name\r\n(which translates to “cheerful”) fool you – it actually comes from an old irrigation canal (Séquia\r\nd’Alegret) that once ran here . What to see: It’s a narrow lane with traditional single-story\r\nhouses and flowers on balconies. Local lore from a 1948 Fallas poem joked that “the most dreary\r\nstreet of all is called Alegre(Alegret)” – a playful irony. Why visit: Strolling down Calle Alegret\r\nfeels like stepping back in time. Check out the mix of old wooden doors, wrought-iron\r\nbalconies, and maybe a leftover huerta (orchard) gate. It’s an Instagram-worthy little street\r\nthat captures the quiet, romantic village vibe of Benimaclet’s past",
+      "lat": 39.494275,
+      "lon": -0.360645,
+      "tags": [
+        "historic"
+      ]
+    },
+    {
+      "name": "Calle de los Poetas Anónimos",
+      "desc": "Yes, “Anonymous Poets Street” is a real place! It’s a small\r\nstreet parallel to C/ Arquitecto Arnau . What it is: A street uniquely dedicated to all unknown\r\npoets – a tribute to unheralded creativity . Why visit: The street sign alone is a curious find for literary lovers (one of the few streets in the world honoring poets in general). The surrounding\r\narea is pleasant and residential, and knowing the story gives it a special aura – as if every\r\nrandom person reciting a poem here is somehow at home. Take a photo with the street sign and\r\nfeel the poetic spirit of Benimaclet, a neighborhood that embraces art in everyday life.",
+      "lat": 39.495176,
+      "lon": -0.364526,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Barón de San Petrillo & Historic Center Streets –",
+      "desc": "– Barón de San Petrillo is the main road cutting\r\nthrough Benimaclet’s center, named after a local dignitary who helped pave the area’s streets\r\nlong ago . Off its side streets, you’ll find quaint alleys like C/ Murta, C/ San Miguel, C/ Emili\r\nBaró, etc., each with their own slice of history. Why visit: Wander these labyrinthine lanes to see\r\ntraditional tile street signs, old street lamps, and maybe a hidden shrine or two. Benimaclet’s\r\nstreet plan still hints at its former village layout, so exploring here is a joy for urban adventurers.\r\nFor example, Calle San Miguel leads to a tiny plaza with a mural of Saint Michael, and Calle Murta\r\neach March hosts one of the neighborhood’s Falla sculptures . Every street has a story if you\r\ndig deep enough – even if it’s just the story of neighbors gossiping on chairs outside (a common\r\nsight on warm evenings!)",
+      "lat": 39.495172,
+      "lon": -0.363782,
+      "tags": [
+        "artworks",
+        "park",
+        "historic"
+      ]
+    },
+    {
+      "name": "Plaza de las Trece Rosas",
+      "desc": "A small, secluded square on the northern edge of Benimaclet (near\r\nC/ López Mechó) . What it is: It’s named in memory of the “13 Roses,” a group of young\r\nwomen tragically executed in 1939 after the Spanish Civil War – a poignant historical reference.\r\nWhy visit: The plaza itself is quiet and simple (with benches and trees), but knowing its name\r\ngives it weight. It’s adjacent to the L’Horta social center, so you’ll often see street art and\r\ncommunity notice boards around. It’s a spot for reflection amid the bustle – a reminder of\r\nhistory tucked in a modern neighborhood.",
+      "lat": 39.496135,
+      "lon": -0.365441,
+      "tags": [
+        "artworks",
+        "park"
+      ]
+    },
+    {
+      "name": "Hidden Moorish Treasure of Benimaclet",
+      "desc": "Legendary site. According to local lore, during the\r\nReconquista a group of Moors buried a cache of treasure on the outskirts of Benimaclet before\r\nfleeing . To this day the treasure remains unfound, and mysterious ghostly lights are said to\r\nappear at night guiding those who seek it . The idea of a secret hoard adds an air of mystery\r\nto Benimaclet’s huerta (orchards), giving adventurous visitors a fun legend to ponder as they\r\nexplore the rural edges of the neighborhood.",
+      "lat": null,
+      "lon": null,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "“Suitcase Murder”",
+      "desc": "Infamous crime scene. Not all of\r\nBenimaclet’s stories are old – one lurid tale made headlines in 2009 when a passerby discovered\r\na dismembered body stuffed in a suitcase on a weedy vacant lot off Calle Mistral . The\r\nvictim, a young man from Honduras, had been stabbed multiple times and brutally packed into\r\nthe luggage, which was left amid the bushes by the railway tracks . The gruesome find\r\nshocked the neighborhood and led to the arrest of two suspects (a mother and daughter\r\nconnected to the victim) in what the press dubbed the “crimen de la maleta”. While the lot itself is\r\nunremarkable and has since been redeveloped, true-crime enthusiasts or dark-tourism seekers\r\nmight recall this spot as the setting of one of Valencia’s more macabre modern legends .\r\nIt’s a sober reminder that even a friendly barrio like Benimaclet has its occasional dark chapter\r\nwhispered about in local lore",
+      "lat": 39.492,
+      "lon": -0.363,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Letras y Vinos",
+      "desc": "A beloved bookshop-meets-bar on Calle Músic Belando. Locals fiercely support\r\nthis cozy spot – at events it often overflows with people into the pedestrian street. It pairs\r\nliterature with wine; you can sip a garnacha while enjoying a book or live piano music . A\r\ngreat place to mingle with Benimaclet’s bohemian crowd",
+      "lat": 39.49416,
+      "lon": -0.361753,
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "name": "Librería La Traca",
+      "desc": "An iconic neighborhood bookstore & stationer (founded 1974) in the\r\nhistoric center (C/ Enric Navarro). La Traca is a cultural institution that for decades has promoted\r\nreading and community activities in this formerly village-like barrio . It offers a curated\r\nselection of literature in Spanish and Valencian, hosts book presentations, and its owners are\r\nknown to give personalized recommendations. (If it’s closed, check out the Alice in Wonderland\r\nmural on its shutter – open hours reveal a warm literary haven!)",
+      "lat": 39.495478,
+      "lon": -0.362882,
+      "tags": [
+        "artworks",
+        "historic"
+      ]
+    },
+    {
+      "name": "Librería Gaia",
+      "desc": "– A family-run bookstore with over 25 years of history . It’s a small oasis\r\nsmelling of new paper, carrying everything from children’s books and poetry to classics and noir.\r\nLola, the founder, and her team greet you with a smile and help you find the perfect read .\r\nGaia also doubles as a stationery shop, so you’ll feel the old-school neighborhood charm here",
+      "lat": 39.494252,
+      "lon": -0.362086,
+      "tags": [
+        "education",
+        "retail"
+      ]
+    },
+    {
+      "name": "Librería La Rossa",
+      "desc": "A literary café-bookshop on Carrer de la Murta, dedicated to female\r\nauthors and local literature. It has comfy armchairs and even coffee service. La Rossa’s mission is\r\nto amplify women’s voices in literature – you’ll find a unique selection of books written by\r\nwomen, plus regular literary events, poetry readings, and a welcoming feminist vibe (even if you\r\ndon’t read Spanish, the atmosphere is great).",
+      "lat": 39.494465,
+      "lon": -0.361888,
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "name": "La Repartidora",
+      "desc": "A bookstore & café (C/ Reverend R. Tramoyeres) known for its critical and\r\nsocial-conscious selection. It’s a hub for alternative culture: shelves packed with political,\r\nphilosophical and indie publications. The space invites debate and ideas – you can enjoy a coffee\r\nhere amid thought-provoking titles and occasional talks. La Repartidora is essentially an “oasis of\r\nculture and critical thinking” in the heart of Benimaclet , making it a fascinating stop for\r\nsocially curious travelers.",
+      "lat": 39.497404,
+      "lon": -0.361273,
+      "tags": [
+        "food",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Mercado del Libro Usado de Benimaclet",
+      "desc": "Don’t be fooled by the name “market” – this is\r\nactually a second-hand bookshop (C/ San Columbano, 14) crammed with used and out-of-print\r\nbooks. It has an eclectic catalog from novels to technical manuals (medicine, IT, etc.) . The best\r\npart? The ultra-cheap finds – they permanently offer deals like 1 book for €2.85, 2 for €5, or 5 books for €10 . It’s perfect for treasure-hunting bibliophiles on a budget, and a glimpse into\r\nlocal student life (you might see university students trading old textbooks here).",
+      "lat": 39.495184,
+      "lon": -0.36286,
+      "tags": [
+        "education",
+        "retail"
+      ]
+    },
+    {
+      "name": "La Vespa Roja",
+      "desc": "A vintage shop that’s more than just fashion. Tucked in Benimaclet (Plaça del\r\nMercat, 19), La Vespa Roja specializes in retro furniture, vinyl records, vintage toys and\r\nclothing . It’s known for its originality – stepping inside feels like time-traveling to a boho flea\r\nmarket. You might find a 1970s lamp, a classic Levi’s jacket, or old Valencian memorabilia. Even if\r\nyou’re not buying, it’s fun to browse and soak up the quirky retro vibes.",
+      "lat": 39.495092,
+      "lon": -0.363049,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Tienda Solidaria Piel de Mariposa",
+      "desc": "– A charity thrift shop at C/ Dolores Marqués & Torreta de\r\nMiramar that “gives wings to solidarity.” It’s one of 11 such shops in Spain supporting those with\r\nthe rare “butterfly skin” disease (epidermolysis bullosa). Run entirely by volunteers, its mission is\r\nto raise awareness of this incurable condition and funds for specialized care for patients\r\nand families . Inside you’ll find everything from donated clothing (wedding dresses,\r\ntraditional costumes) to books, toys and decor – all at very low prices. Locals joke it’s the “El Corte\r\nInglés of Benimaclet” because you can find a bit of everything . Visiting supports a good cause\r\nand offers a heartwarming look at community volunteerism.",
+      "lat": 39.495435,
+      "lon": -0.361762,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Benimarket",
+      "desc": "Not a permanent shop, but a periodic local market that’s the epitome of\r\n“random fun.” Benimarket is a self-managed artisan and indie market held on Sundays in\r\nPlaza de Benimaclet (roughly monthly) . Dozens of stalls showcase local designers, artists\r\nand second-hand vendors: you’ll browse art prints, handmade jewelry, vintage vinyls, indie\r\ncomics, decor items, fashion & more, often accompanied by live music and kids’ activities .\r\nIt was created by neighbors (with the help of Estudio 64) to boost community life. If you’re lucky\r\nto be around when it happens, it’s a fantastic chance to snag unique souvenirs and mingle with\r\nthe locals in a street-fair atmosphere",
+      "lat": 39.493902,
+      "lon": -0.363129,
+      "tags": [
+        "live",
+        "park",
+        "retail"
+      ]
+    },
+    {
+      "name": "CAM Studio",
+      "desc": "A Ceramic & Art Multispace (C/ Enric Navarro 26) where you can literally get your\r\nhands dirty. Opened by a French artist, it’s a welcoming studio in the heart of Benimaclet\r\noffering ceramics courses and art workshops in Spanish, English or French . Travelers can\r\njoin one-off evening workshops (sometimes paired with wine tasting – “ceramics & vino” nights\r\nare a thing here!). They have an artistic coworking space as well, and a small shop selling the\r\nfounder’s handmade pottery (think imperfectly perfect cups, bowls, and tiles) . CAM Studio\r\nfrequently hosts casual art events, exhibitions and craft markets. It’s a great spot for a creative\r\nbreak – imagine making your own Valencian ceramic souvenir to take home.",
+      "lat": 39.494172,
+      "lon": -0.361767,
+      "tags": [
+        "museums",
+        "retail"
+      ]
+    },
+    {
+      "name": "Club de Ajedrez Gambito Benimaclet",
+      "desc": "A chess club with a long legacy, based in the\r\nBenimaclet Sports Center (Polideportivo, C/ Daniel Balaciart s/n). Talking about chess in this\r\nneighborhood is essentially talking about Club Gambito – it’s the merger of two historic clubs\r\n(one dating to 1944!). They have over 100 members from age 7 to 70, and the club hosts classes,\r\nlocal tournaments, and even international opens. If you’re a chess enthusiast, you might drop\r\nby the sports hall on a weeknight to see a tournament game or even join a casual game. The vibe is friendly and intergenerational, true to the spirit of Benimaclet. (Fun fact: their teams are\r\namong the top in Valencia , but they’re very welcoming to visitors.)",
+      "lat": 39.4952,
+      "lon": -0.3631,
+      "tags": [
+        "live",
+        "historic",
+        "sport"
+      ]
+    },
+    {
+      "name": "Valenbisi Bike Stations",
+      "desc": "For a practical yet local experience, consider using Valencia’s public\r\nbikes in Benimaclet. The neighborhood has several Valenbisi stations (e.g. at Plaza de\r\nBenimaclet and along Av. Valladolid). Grab a bike here and you’ll often see students and\r\nresidents doing the same – it’s part of local life. Riding through the area’s bike-friendly streets or\r\nover to the nearby Turia Gardens is both fun and convenient. Bonus: scooters are popular too –\r\nyou’ll find e-scooter parking spots around. It’s not a single location, but using these stations lets\r\nyou participate in the sustainable lifestyle that many Benimacleters embrace. And hey, it’s\r\nrandom fun to explore the city on two wheels like a local!",
+      "lat": 39.494823,
+      "lon": -0.361477,
+      "tags": [
+        "park",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Fusionart Multiespacio",
+      "desc": "FusiónArt Multiespacio is a collective cultural center where all art forms converge, reflecting\r\nBenimaclet’s artistic soul. It operates as an association of artists open to all audiences, hosting\r\neverything from concerts and theater to dance, magic shows, exhibitions, workshops and more .\r\nAlways embracing new creative proposals, this space truly lives up to its name by “fusing” arts of all\r\nkinds. The result is an inclusive hub of creativity that exemplifies Benimaclet’s reputation for cultural\r\nvibrancy – a neighborhood known for offering activities of all tastes and ages, and strongly promoting\r\nthe arts",
+      "lat": 39.48441,
+      "lon": -0.359528,
+      "tags": [
+        "museums",
+        "live"
+      ]
+    },
+    {
+      "name": "Cafeteria Panaderia Carmelas",
+      "desc": "Carmelas is a bakery-café that blends tradition with personal passion. In 2016, a local baker named\r\nVanesa decided to take over this “cozy lifelong bakery” when the original owners retired . With over 25\r\nyears of baking experience, she infused new life into the shop, keeping its old-fashioned charm.\r\nCarmelas opens daily to serve fresh bread, pastries, and café fare – desayunos (breakfasts), bocadillos\r\n(sandwiches), and even homemade ice creams – truly a one-stop spot for locals throughout the day .\r\nIt’s described as a traditional bakery with fresh, homemade products, maintaining the kind of\r\npersonal, friendly service that makes patrons feel at home . Vanesa’s revitalization of Carmelas has\r\npreserved a little piece of Benimaclet’s heritage while satisfying modern tastes",
+      "lat": 39.484674,
+      "lon": -0.355454,
+      "tags": [
+        "food",
+        "historic",
+        "retail",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Horno Pastelería Real de Gandíaa",
+      "desc": "A beloved institution on Carrer Real de Gandia, this horno-pastelería (bakery & pastry shop) stands firm\nin its commitment to artisanal quality. Neighbors celebrate it as a “panadería de las de toda la vida” – a\ntrue old-school bakery – offering superb rustic bread (pan de pueblo) and its famous “huesito”\nsourdough loaf . The shop’s pastries and sweets are equally dreamy: customers rave about the\nchocolate croissants and madeleines, as well as unique local specialties like empanadillas de pisto\n(savory veggie turnovers), tortell de crema (cream-filled pastry), and purrunas (exquisite shortbread\ncookies) . Beyond the delicious goods, people cherish the warm, familial service – the staff\n(notably the friendly ladies behind the counter) make everyone feel genuinely welcome . In an\nera of industrial bread, Horno Real de Gandía remains a “negocio con alma” (a business with soul) that locals loyally support to keep the tradition alive . Each visit, filled with the aroma of fresh-baked\r\nbread and personal greetings, feels like coming home in Benimaclet.",
+      "lat": 39.485005,
+      "lon": -0.354856,
+      "tags": [
+        "food",
+        "education",
+        "retail"
+      ]
+    },
+    {
+      "name": "Antic Forn d'Alcalde",
+      "desc": "The “Mayor's Oven” is more than a bakery, it is part of the living history of Benimaclet. Its name\nis due to Miguel “Micalet” Cuenca, a former mayor of the town who ran the oven; in fact,\nMiguel was mayor for 24 years and his bakery became popularly known as the forn de\nl'alcalde . Today the Antic Forn de l'Alcalde continues to serve traditional breads and sweets, maintaining\nthat family legacy and the affection of the neighbors towards the original “mayor's oven”. Entering here is\nto savor the local history in each loaf of bread.",
+      "lat": 39.485702,
+      "lon": -0.36025,
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "name": "Llibreria La Traca",
+      "desc": "La Traca is a historic bookstore and stationery shop that has been a pillar of Benimaclet since 1974 .\nIts very name pays homage to a famous satirical magazine (“La Traca”) from Valencia’s past .\nFounded by two friends and later taken over by Virginia Sena – a passionate reader who always\ndreamed of running a bookstore – La Traca grew into a true family business . Virginia, her husband\nPaco (who left his job to help), and their children all devoted themselves to the shop, working “de sol a\nsol” (from sunup to sundown) to serve the community . The result is more than a bookstore; it’s\npractically a Benimaclet institution, woven into the neighborhood’s life.\nAt La Traca you’ll find a bit of everything – literature of all genres (with a strong selection of children’s\nbooks) in both Spanish and Valencian . The shop also carries a subtle political stance: committed to\nleft-wing ideals, it has famously never stocked titles by certain far-right figures . Now run by\nVirginia’s son David, who has become a leader in Valencia’s guild of booksellers, La Traca continues to\ninnovate while keeping its legacy . The store regularly hosts book presentations and cultural\nactivities, further cementing its community role . Even its physical presence is iconic – when closed,\nthe shop’s shutters are painted with a whimsical Alice in Wonderland mural, and purchases go out in\nbags printed with quotes from the original La Traca magazine . In short, La Traca offers not only\ndecades of literary expertise but also a welcoming atmosphere that has made it “practically an\ninstitution in Benimaclet”, where generations of readers have found inspiration",
+      "lat": 39.485118,
+      "lon": -0.359087,
+      "tags": [
+        "artworks",
+        "historic",
+        "retail"
+      ]
+    },
+    {
+      "name": "Librería Gaia",
+      "desc": "Since 1994, Librería Gaia has brought culture to the neighborhood with a very human touch. Its founder,\nLola Samper, opened this small bookstore guided by the romantic idea of “spending the day among books” .\n25 years later, Gaia has become a large literary family where customers are friends: Lola\nknows them by name, knows their families, and many stop by every day to say hello. The name Gaia\nis inspired by James Lovelock's The Ages of Gaia - the vision of the Earth as a living being -\nreflecting Lola's desire to have “a little bit of everything” in the bookstore. In addition to its carefully curated\nselection of books for adults and children, Gaia organizes book clubs, presentations and activities,\nbeing a true community cultural center in Benimaclet.",
+      "lat": 39.479918,
+      "lon": -0.356044,
+      "tags": [
+        "live",
+        "transportation"
+      ]
+    },
+    {
+      "name": "La Rossa - Llibres en Femení",
+      "desc": "La Rossa is a newer addition to Benimaclet’s bookstore scene, carving out a unique identity as a\r\nfeminist-oriented bookshop. Its name (“the red-headed woman”) nods to “Big Blonde” – Dorothy\r\nParker’s famous short story, titled Una Rossa Imponent in Catalan – paying tribute to that work and\r\nauthor . True to its inspiration, La Rossa aims to be a reference point for those seeking women\r\nwriters, both national and international. This charming librería actively promotes gender equality and\r\nwomen’s presence in culture, stocking its shelves with literature by female authors and scholarship on\r\ngender issues . In essence, it’s “a whole bookstore in feminine”, providing access to feminist essays\r\nand serving as a meeting place for ideas about women’s role in society . Opened on Enric Navarro\r\nStreet, La Rossa has quickly become a welcoming haven for readers who want to explore literature with\r\na feminist lens – an inviting space where the legacy of women writers is celebrated and continued.",
+      "lat": 39.486103,
+      "lon": -0.358263,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "La Repartidora",
+      "desc": "La Repartidora is not just a bookshop; it’s a community-driven bookstore and critical space that\r\nembodies Benimaclet’s activist spirit. Organized as an asociative or cooperative bookstore, La\r\nRepartidora specializes in thought-provoking, critical literature and works towards social transformation\r\n“from the world of books.” Its mission goes beyond selling books – the space doubles as a civic hub\r\nfor discussion and grassroots events. La Repartidora regularly hosts book presentations, courses,\r\ntalks, and even provides its space for local social movements to hold assemblies . This reflects the\r\nethos of the neighborhood: engaged, community-oriented, and always striving for a better society\r\nthrough culture and debate. Tucked on Reverend Rafael Tramoyeres Street, the bookstore has become\r\na gathering place for activists, students, and curious minds. Its welcoming atmosphere invites anyone\r\nto drop in, browse titles on philosophy, politics, and social issues, and perhaps stay for a workshop or meeting. La Repartidora exemplifies how a small neighborhood shop in Benimaclet can serve as a\r\nmeeting point for social change, fueled by the power of books and cooperation",
+      "lat": 39.485131,
+      "lon": -0.361492,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Centro Budista de Valencia",
+      "desc": "Hidden within Benimaclet’s busy streets is an oasis of calm: the Centro Budista de Valencia. Part of the\r\nworldwide Triratna Buddhist Community, this center recently relocated and “reopened in Benimaclet”\r\nto continue its mission of teaching meditation and Buddhism in modern urban life . Triratna\r\n(meaning “Three Jewels”) is a global movement that isn’t monastic but rather a network of lay Buddhists\r\nadapting Buddha’s teachings to today’s world . At the Benimaclet center (on Calle Albocàsser),\r\nvisitors can attend meditation sessions, talks, and courses in a friendly, non-dogmatic environment. The\r\ncenter also offers activities like mindfulness, yoga, tai-chi, and other body-awareness classes to\r\ncomplement the meditation practice . The goal is to provide a space for reflection and personal\r\ngrowth open to people of all backgrounds – in line with Triratna’s philosophy that anyone can benefit\r\nfrom Buddhist principles in daily life . Stepping into the Centro Budista, one finds a peaceful,\r\nwelcoming atmosphere. It’s become a local haven where residents (including many students from\r\nnearby universities) can learn to still their minds and find community. In fast-paced Benimaclet, the\r\nBuddhist Center offers an important reminder of mindfulness and compassion amidst the urban buzz.",
+      "lat": 39.487128,
+      "lon": -0.364471,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Claus",
+      "desc": "Claus is a neighborhood fashion boutique catering to both women’s and children’s styles . Located\r\non the historic Carrer Enric Navarro, Claus has the feel of a friendly local shop where personal service\r\ncomes first. It carries a curated selection of clothing for women and kids, emphasizing stylish yet\r\npractical pieces for everyday wear. Shoppers appreciate finding contemporary outfits for themselves\r\nand their little ones under the same roof – from trendy women’s apparel to cute children’s outfits. As a\r\nrecommended local business, Claus prides itself on its trato personal (personalized attention) and a\r\nrange of sizes and styles to fit the community’s needs . In a neighborhood that values local\r\ncommerce, Claus stands out as the go-to spot for families seeking quality fashion with a personal touch.\r\nWhether you need a new dress or a set of kids’ school clothes, you’re likely to be greeted by name and\r\nwith genuine advice. This unassuming boutique thus contributes to Benimaclet’s close-knit, shop-local\r\nethos, keeping the tradition of the friendly corner shop alive.",
+      "lat": 39.484548,
+      "lon": -0.357154,
+      "tags": [
+        "education",
+        "historic",
+        "retail"
+      ]
+    },
+    {
+      "name": "Goatxa",
+      "desc": "Goatxa brings humor and creativity to Benimaclet’s local shops. The project was born in 2006 when Juanfran Peñaranda and his brother started selling custom T-shirts with witty slogans — the first one featured the famous phrase “¿Por qué no te callas?” (“Why don’t you shut up?”) said by the King to Hugo Chávez, which went viral. After starting online, Goatxa made the leap into the neighborhood: they opened a small store, which eventually became too cramped, leading them to move in 2023 to a larger space that combines a store and workshop.\n\nThe name Goatxa comes from “la guacha” (Albacete dialect for “the pretty one”) and nods to the Kukuxumusu brand; their logo is a lizard chomping on a flea, a cheeky statement of intent. Inside you’ll find T-shirts, mugs, pins, and all kinds of quirky and unique products — all born from Juanfran’s overflowing imagination, who calls himself a “textile comedian.”\n\nGoatxa has also shown its charitable side by creating pins and bracelets to raise funds after natural disasters. Stepping into Goatxa means soaking up local wit: a corner where humor and pop culture meet neighborhood life.",
+      "lat": 39.48696,
+      "lon": -0.362233,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "koopera Store",
+      "desc": "Koopera Store Benimaclet is not your average second-hand shop – it’s part of a larger social and\r\nenvironmental project linked to Cáritas, aimed at inclusion and sustainability . The Koopera\r\ninitiative works to integrate people at risk of social exclusion by creating jobs in eco-friendly activities\r\nlike textile recycling. In the Benimaclet branch (on Carrer Emilio Baró), you’ll find a wide selection of ropa\r\nde segunda mano (second-hand clothing) for men, women, and children, plus books, small electronics,\r\nand other items – all given a second life. Shopping here feels good in multiple ways: you can snag\r\nunique vintage or gently-used clothes, promote reuse and upcycling, and support a program that\r\nprovides training and employment to those who need a second chance . The store is well-organized\r\nand affordable, making sustainable fashion accessible to the community. Koopera also facilitates\r\ndonations and textile drop-offs (those ubiquitous green Cáritas clothing containers around Valencia\r\nfeed into this program) . In essence, Koopera Store embodies Benimaclet’s collaborative spirit and\r\nconcern for others – it’s a shop where buying a jacket or toaster is also a small act of solidarity and\r\nenvironmental care.",
+      "lat": 39.48519,
+      "lon": -0.362276,
+      "tags": [
+        "park",
+        "retail"
+      ]
+    },
+    {
+      "name": "Su Pan",
+      "desc": "Su Pan (literally “Your Bread”) is a beloved neighborhood bakery and prepared-food shop that keeps\r\nBenimaclet well-fed. By morning it operates as a classic horno y pastelería, with fresh bread and\r\npastries; by lunchtime it transforms into a take-away kitchen offering home-cooked dishes. In fact, Su\r\nPan is known for its comidas para llevar and even catering – you can order traditional paella, arroz al\r\nhorno (baked rice), casseroles and more for your family gatherings . They advertise everything from\r\nfreshly baked breads and sweets to daily lunch menus and event catering, making it a versatile\r\nculinary stop. It’s not uncommon to see a line of neighbors picking up their daily loaf or a container of\r\nhot paella to go. The shop has expanded with a second location “Su Pan 2.0”, a nod to its popularity in\r\nthe barrio . Su Pan’s charm lies in its mix of quality and community feel – the staff know their\r\nregulars and might slip an extra roll or share a cooking tip. Their services even extend to organizing\r\nevents, reflecting how deeply integrated this bakery-caterer is in local life . From breakfast through\r\ndinner, Su Pan has become an essential part of the Benimaclet daily routine, nourishing body and soul\r\nwith authentic, comforting foods.",
+      "lat": 39.484839,
+      "lon": -0.358644,
+      "tags": [
+        "food",
+        "retail",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Escuela Meme",
+      "desc": "Escuela Meme is an inspiring collaborative cultural association that perfectly encapsulates\r\nBenimaclet’s DIY spirit. The group is literally building its space from the ground up: they are in the\r\nprocess of recovering an old alquería (a traditional Valencian farmhouse) and converting it into a selfmanaged cultural center open to the city . It’s a constantly evolving project, powered by volunteers\r\nand creative residents who see potential in reviving heritage architecture for modern community use.\r\nThe idea is to create an autonomous venue for arts, education, and civic engagement – a place for\r\nworkshops, performances, urban gardening, you name it – all under the ethos of sharing and\r\nexperimentation. Escuela Meme describes itself as “una associació col·laborativa i en evolució constant”,\r\nhighlighting that it’s a collaborative association in continuous evolution . Though still developing, the\r\nMeme project has already hosted cultural events and served as a meeting point for local initiatives.\r\nBecause the building is an authentic farmhouse structure, being restored brick by brick, the\r\natmosphere is rustic and welcoming.  In rescuing a piece of Benimaclet’s rural past and giving it new purpose,\r\nEscuela Meme symbolizes the neighborhood’s knack for mixing tradition with innovation in the cultural\r\nsphere.",
+      "lat": 39.490206,
+      "lon": -0.357929,
+      "tags": [
+        "historic"
+      ]
+    },
+    {
+      "name": "Galesh Asociación de Familias Homoparentales",
+      "desc": "Galesh is the association of LGBT families in the Valencian Community, based in Benimaclet.\nFounded in 2008, this NGO was created to provide a shared space for welcoming, support, and information for same-sex parent families.\n\nAt Galesh, lesbian, gay, trans, and bisexual parents come together to share experiences, organize activities for their children, and fight for full equality of rights.\nIt’s a source of pride for the neighborhood to have Galesh, a reflection of Valencia’s diversity and openness. From here, new family models are made visible, and a vital support network is built for many people.",
+      "lat": 39.482863,
+      "lon": -0.359721,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Associació de Veïns de Benimaclet",
+      "desc": "The Neighborhood Association of Benimaclet (Associació de Veïns i Veïnes) has been the driving force\nbehind the area’s community improvements for decades. Founded in 1974 (though officially registered\nin 1976), its very first campaign was to demand a safer trenet (the small train that once ran through the\narea) . At that time, Benimaclet had just ceased being an independent village and become a district\nof Valencia city, so residents wasted no time in organizing for better services and infrastructure . The\nhistory of the AVV (Asociación Vecinal) is essentially a history of neighborhood activism. Thanks to\ntheir persistent advocacy, many public services arrived in Benimaclet sooner than they otherwise would\nhave . And the work continues – the association is still pushing for things like a dedicated civiccultural center and more youth spaces, among other needs .\nWhat’s special about Benimaclet’s neighbors association is its inclusive, nonpartisan ethos. It’s open to\nall residents of the barrio, “beyond any ideology,” as long as they share basic values of democracy and\ncommunity solidarity.",
+      "lat": 39.488529,
+      "lon": -0.357453,
+      "tags": [
+        "transportation"
+      ]
+    },
+    {
+      "name": "Espacio Esperanzarecicla",
+      "desc": "Espacio Esperanzarecicla is a charming workshop space where sewing, upcycling and creativity come\r\ntogether. It’s run by Esperanza Peña, a local fashion designer and sewing teacher who set up her studio\r\nin Benimaclet to share her passion . Here, neighbors can take clases de costura creativa (creative\r\nsewing classes) and join all kinds of hands-on workshops – from learning basic machine sewing, to\r\ncrochet and patchwork, to repurposing old clothes into new treasures . The name\r\n“Esperanzarecicla” carries a double meaning: Esperanza recycles and also Hope recycles – reflecting both\r\nthe founder’s name and the hopeful act of giving new life to materials.\r\nWalking into the Esperanzarecicla space, you’ll often find a cozy scene: a circle of people chatting as they\r\nwork on projects, spools of colorful thread and fabric scraps lining the shelves, and Esperanza herself\r\noffering guidance with a warm smile. It’s said that attending her classes brings “mucho más que clases de\r\ncostura: un grupo de amigas”, i.e. much more than just sewing lessons – it creates a group of friends who\r\nbond over the hobby",
+      "lat": 39.486776,
+      "lon": -0.365562,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Satchmo Swing",
+      "desc": "Satchmo Swing School is where dance, music, and friendship swing hand-in-hand. Founded by two\r\nenthusiasts – Nina (dynamic and passionate) and Jesús (calm and friendly) – this Lindy Hop and jazz\r\ndance school has fostered a tight-knit “little family” of dancers . By day, Satchmo offers classes in\r\nLindy Hop, Balboa, Jazz Steps and even tap dance (claqué) , teaching the joyful swing styles of the\r\n1920s–40s. But what truly sets it apart is the community spirit that extends beyond class time. Nina and\r\nJesús have cultivated a space where students don’t just learn steps – they hang out, play board games\r\ntogether, spin vintage jazz vinyl on the gramophone, and basically make Satchmo a second home .\r\nOn many evenings, you might find Satchmo’s crew organizing impromptu jam sessions and social\r\ndances in the nearby plaza, bringing Lindy Hop out into the open air for all to enjoy . And each last\r\nFriday of the month, the school hosts a special event to share and celebrate jazz history with the\r\nbroader community",
+      "lat": 39.487908,
+      "lon": -0.365555,
+      "tags": [
+        "park",
+        "education"
+      ]
+    },
+    {
+      "name": "A Contar Mentiras",
+      "desc": "A Contar Mentiras (literally “To Tell Lies”) is Benimaclet’s longstanding dance studio for creative\nmovement – but it’s far from a traditional ballet school. Since 2003, this space has been devoted to\ndance in an unorthodox, liberating way . If you come here, “it’s because you’re not looking for a strict\nclassical or kids’ dance academy” with rigid poses and manners . Instead, you’ll find a place where\nindividuality and inclusion are celebrated. The ethos is that everyone can dance with rigor and\ndedication, but without losing their personal style or joy. As the studio’s philosophy (in Valencian)\nplayfully puts it: you come “because you like going – you, your kids, and your parents”, and because you\nknow even someone with a physical disability “can do anything in dance” . In other words, all are\nwelcome, just as they are.\nMuch of this inclusive spirit comes from the lead instructor, Santi, who is a central figure at A Contar\nMentiras . Students mention how approachable he is – you can chat with Santi as easily as you can\ntake a class with him. The studio also doubles as an experimental art space: they often allow the hall to\nbe used as an artistic residency or rehearsal space for performers, supporting the wider arts\ncommunity . True to its name, A Contar Mentiras fosters a bit of whimsy and rule-breaking.\nThis casual,\nintergenerational vibe makes the studio feel like a social club as much as a school. Ultimately, A Contar\nMentiras has become a cherished enclave in Benimaclet where dance and movement are accessible to\nall, free from pretension – a place that proves technique can go hand in hand with laughter, creativity,\nand authenticity",
+      "lat": 39.485545,
+      "lon": -0.360959,
+      "tags": [
+        "live",
+        "education"
+      ]
+    },
+    {
+      "name": "La Xocolatera",
+      "desc": "La Xocolatera is a small, old-school grocery shop in Benimaclet, famous for its family history tied to chocolate.\nThe nickname comes from Grandpa José “el Chocolater” Pastor, who originally made homemade chocolate and delivered it door to door.\n\nIn the 1950s, he opened his own shop in the village square part of the old Benimaclet market where he sold chocolate by the quarter kilo, grinding the cacao right there in the store. That first shop, located next to the church, became a community hangout: in summer, the owners would bring out chairs to the square for evening chats.\n\nOver time, the family moved the business to nearby Calle Utiel, but the original “antic forn de la xocolatera” still stands (now closed), with its double doors to the square and backyard. It even housed the renowned teacher-poet Carles Salvador during the post-war years.\n\nToday, La Xocolatera is run by Don José’s grandchildren, still offering the same warm, family-style service. They no longer grind cacao, but the shelves are filled with fruit, vegetables, pickles, and traditional staples.\nIt’s a modest, beloved store just saying the name brings back the scent of stone-ground chocolate and the memory of old Benimaclet.",
+      "lat": 39.485917,
+      "lon": -0.359308,
+      "tags": [
+        "park",
+        "education",
+        "religious",
+        "retail"
+      ]
+    },
+    {
+      "name": "Savoy",
+      "desc": "Fran García and Valeria Llopis, founders of the swing dance school Savoy, in front of their studio decorated with a mural referencing the legendary Savoy Ballroom in Harlem.\n\nSwing dancing has found a home in Benimaclet thanks to Savoy the first school in Valencia fully dedicated to the dances of the 1920s–40s. It opened in 2016, founded by Fran (a musician from Castellón) and Valeria (a Russian psychologist), who chose Benimaclet for its “special charm” to make their dream come true.\n\nThe name Savoy pays tribute to the iconic Harlem venue where Black and white dancers shared the floor during the golden age of swing. On the building’s facade, right next to the tram tracks, you’ll see Billie Holiday and other Lindy Hop icons a sign of the passion that lives inside.\n\nWhat started almost as a hobby “that got out of hand” now hosts over 400 students every week. Beyond teaching steps and aerials, Savoy also brings the party outdoors: on Saturday afternoons, they roll out the turntables in Plaça de Benimaclet for open-air “clandestine” swing dances.\n\nThe vibe is so infectious that swing has become part of the neighborhood’s rhythm. Thanks to Savoy (and their sister school Satchmo), Benimaclet relives the joy and community spirit of swing, with international festivals (like Stompin’ at the Savoy), live music, and endless groove.\nA retro spectacle no tourist would expect to find tucked into the streets of this barrio!",
+      "lat": 39.48467,
+      "lon": -0.361262,
+      "tags": [
+        "artworks",
+        "live",
+        "education",
+        "transportation"
+      ]
+    },
+    {
+      "name": "Taller 21",
+      "desc": "Taller 21 is a self-managed creative space that embodies the artistic spirit of Benimaclet.\nLocated on Calle Marcelino Giner, it’s a multidisciplinary artisan coworking hub where ceramicists, jewelers, fashion designers, illustrators, and other local creators work side by side.\n\nIt was born from the idea of sharing a workshop, tools, and inspiration among multiple artists, encouraging collaboration and mutual learning. Beyond being a workspace, Taller 21 also hosts activities open to the neighborhood from second-hand markets where you can find “treasures from €1 to €10” (vintage clothes, vinyl records, books, decor, etc.) to creative recycling workshops (like the “fusion bags” session that turns used plastic bags into new items).\n\nEverything is guided by a philosophy of sustainability and local support.\nHidden behind a gate, this space has become a small cultural oasis where any neighbor with an artistic spark can find their place.\nIn the words of its founders: “Siga com siga la manera d’expressar la teua creativitat, ací pots fer-ho!” -- whatever your way of expressing creativity, you can do it here at Taller 21.",
+      "lat": 39.485752,
+      "lon": -0.355928,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Full Crossfit",
+      "desc": "In contrast to traditional local shops, Full CrossFit Benimaclet represents the neighborhood’s most modern and energetic side.\nIt’s a CrossFit gym located near the university campus, on Calle Leonor Jovaní.\n\nEvery day, it brings together groups of locals and students to train hard, mixing weightlifting, functional exercises, and plenty of motivation shouted through cries of “one more rep!”\nFull CrossFit is part of a larger community (with another center by Patacona beach) and promotes “the joy of training together.”\n\nTheir 300+ m² warehouse, with bold yellow walls and upbeat music, has become a hub for those seeking a healthy lifestyle in Benimaclet. Beginners and athletes alike are encouraged to push themselves, always under the guidance of certified coaches.\n\nThe vibe is young and multicultural, mirroring the student-heavy character of the neighborhood.\nFull CrossFit shows how Benimaclet is evolving from casual chats in the square to HIIT classes, but always with that sense of community (més i millor, “more and better,” is their motto).\n\nFor many locals, this box isn’t just a gym — it’s a tight-knit fitness family where getting in shape feels fun and close to home.",
+      "lat": 39.485631,
+      "lon": -0.36126,
+      "tags": [
+        "park",
+        "education",
+        "retail",
+        "sport",
+        "transportation"
+      ]
+    },
+    {
+      "name": "bingo benimaclet",
+      "desc": "The Benimaclet Bingo Hall — playfully nicknamed “Benimasclet” — is another neighborhood classic.\nLocated on Calle Dolores Marqués, it’s the local bingo spot, especially beloved by older residents.\n\nIts quirky name fuses Benimaclet with masclet (the iconic Valencian firecrackers), giving the venue a festive local twist.\nRecently renovated with modern facilities, Bingo Benimaclet still holds onto that warm, familiar vibe of classic bingo nights: tables full of cards, the suspenseful whispers of “¡línea!” or “¡bingo!”, and waiters serving drinks and snacks.\n\nIt’s common to see groups of older friends meeting here weekly, blending play and socializing.\nFor many tourists, it might seem unusual — but bingo has been a part of everyday Spanish life for decades.\n\nStepping into Benimasclet is stepping into that popular tradition. And who knows — with a bit of luck, you might even walk away with a few euros while soaking in the collective excitement of a true neighborhood bingo night.",
+      "lat": 39.485968,
+      "lon": -0.363056,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Generación X",
+      "desc": "Generación X Benimaclet is a hidden geek paradise on Calle Vila de Muro. It opened in early 2009 when owner Nando Colomina decided that this student-heavy neighborhood was the perfect spot for a comic book and board game store.\n\nThe storefront, covered in comic-style graffiti, grabs your attention right away. Inside, you’re welcomed by a unique mix: shelves packed with graphic novels, manga, and classic comics, plus tables for board games, role-playing, and trading card games.\n\nNando calls it a typical “geek store,” but it’s much more than that — it quickly became a gathering spot for artists, writers, illustrators, and gamers of all ages. Generación X hosts Magic and Warhammer tournaments, comic book launches with guest authors, and children’s workshops where, for instance, they use Paco Roca’s comic Arrugas to talk about Alzheimer’s with kids.\n\nSometimes, board game creators even drop by to test prototypes with local players. The shop is part of a Spanish franchise focused on “smart fun” (with around 20 locations nationwide), but this is the only one in the province of Valencia.\n\nThat’s why fans familiar with Generación X in other cities often seek out this branch when visiting. They might come looking for curiosities like Negan’s barbed-wire bat from The Walking Dead or the Dragon Balls that decorate the store.\n\nEither way, Generación X Benimaclet has cemented itself as a small sanctuary for pop culture lovers — a place where you can grab the latest superhero comic or spend the afternoon chatting about Star Wars. A must-visit for geeky tourists.",
+      "lat": 39.483782,
+      "lon": -0.361908,
+      "tags": [
+        "artworks",
+        "retail"
+      ]
+    },
+    {
+      "name": "Jijonenca",
+      "desc": "When the heat kicks in, one of the busiest spots is La Jijonenca ice cream shop in Benimaclet.\nThis ice cream café belongs to the traditional Jijonenca brand (from Xixona, the birthplace of turrón), which has been delighting taste buds with artisanal ice cream and nougat for over 40 years.\n\nAt their location on Calle Guardia Civil, you can enjoy ice creams in every flavor — from classics like turrón and chocolate to horchata granizada. They also serve 100% handmade horchata de chufa with fartons, lemon and coffee slushies, and even churros with chocolate in the winter.\n\nLa Jijonenca is a summertime meeting point — its terrace fills with families and students enjoying ice cream in the afternoon or a post-dinner iced coffee. Quality is their trademark (their recipes follow traditional methods), and you can taste it in every spoonful.\n\nFor anyone visiting Benimaclet, stopping by La Jijonenca is almost a must — to try a proper Valencian ice cream or a fresh horchata in the shade, soaking in the neighborhood’s everyday rhythm.",
+      "lat": 39.48127,
+      "lon": -0.356981,
+      "tags": [
+        "food",
+        "retail"
+      ]
+    },
+    {
+      "name": "Rincón Latino",
+      "desc": "Rincón Latino brings the flavor of Latin America to the heart of Benimaclet.\nIt’s a small shop and bar for Latin American products on Calle Sant Esperit, and it’s become a meeting point for the neighborhood’s Latin American community.\n\nRecently opened (they celebrated their first anniversary with neighbors in 2023, thanking them “for being part of our story”), Rincón Latino offers everything from traditional foods and spices — arepas, ají amarillo, mazamorra, frozen tamales — to drinks like Inca Kola and Caribbean malt beverages, as well as services like phone booths and money transfers.\n\nStep inside, and you’ll hear salsa and cumbia playing. It’s easy to strike up a conversation with the owner about football or the latest telenovela.\nThe place truly lives up to its name: it’s a corner where Latin Americans “feel at home,” and every visitor is welcomed with tropical warmth.\n\nThey sometimes host small tastings of homemade food or celebrate national holidays (like Dominican Mother’s Day or Venezuelan festivities).\nRincón Latino adds a multicultural touch to Benimaclet, showing how the neighborhood embraces and celebrates diverse cultures within its local fabric.",
+      "lat": 39.4857,
+      "lon": -0.358801,
+      "tags": [
+        "food",
+        "retail"
+      ]
+    },
+    {
+      "name": "Hackerspace Valencia",
+      "desc": "Hackerspace Valencia is a self-managed tech workshop founded in 2013. It offers a shared space where members can work on personal and collaborative projects involving electronics, programming, and open-source tools. The space provides equipment and workstations and operates under principles of open knowledge and community collaboration.\n\nIn addition to internal projects, it has hosted events such as a public Tor Meetup in partnership with The Tor Project, focused on internet privacy and censorship resistance.\n\nVisitors can attend events when scheduled. Access to the space and its tools is managed through a membership system.",
+      "lat": 39.488327,
+      "lon": -0.35837,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Kultural grooves",
+      "desc": "Kultural Grooves is a cultural project in Benimaclet that began in 2012 under the name Capra Records. Over time, it has evolved into a multifaceted initiative that brings together music, art, and community life. Its main location is on Calle Baró de San Petrillo, nº 36, where it operates a shop that sells vinyl records, books, and urban fashion.\n\nThey distribute music in Spain from international labels such as Soundway and Habibi Funk.\n\nA few meters away, at nº 14 of the same street, Kultural Grooves has restored part of the Centro Instructivo Musical (CIM) of Benimaclet. In the building’s ground floor, they created So:Ku – Solcs Kulturals, a dynamic cultural center with an active event program.\n\nTheir activities include live concerts, DJ sessions, art exhibitions, open-air cinema, and a bar-restaurant service within the former CIM cafeteria.\n\nIn summer, they organize Kultural Dayz, a festival that includes sound systems, food trucks, and swimming pools.",
+      "lat": 39.486524,
+      "lon": -0.360161,
+      "tags": [
+        "museums",
+        "live",
+        "food",
+        "retail"
+      ]
+    },
+    {
+      "name": "Horno Cuenca",
+      "desc": "Horno Pastelería Cuenca (C/ Puçol 5) is a famed historic bakery in Benimaclet. A local history blog reports that this shop is “el horno más antiguo de la ciudad,” with origins dating back to the late 14th century . It is now run by the Cuenca siblings, children of the longtime owner, who took over around 2000 . Cuenca’s produces traditional breads and treats, and they are known locally for making the special torta de Benimaclet (an almond cake) each September during the neighborhood festival . The bakery also decorates its window with elaborate chocolate figures at Christmastime, which draws neighborhood notice . Overall, Horno Cuenca is a multigenerational family bakery and a Benimaclet cultural landmark.",
+      "lat": 39.486795,
+      "lon": -0.359393,
+      "tags": [
+        "food",
+        "historic",
+        "retail"
+      ]
+    },
+    {
+      "name": "Bike Converters",
+      "desc": "Bike Converters is a bicycle shop and workshop at Av. Primat Reig 99 in Benimaclet . Its official site describes it as a specialty retailer of mid-to-high range new and second-hand bikes and accessories, with a full workshop for bikes and electric scooters",
+      "lat": 39.486334,
+      "lon": -0.365844,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Vuelta de Tuerca",
+      "desc": "Vuelta de Tuerca is a bicycle shop/workshop on C/ Ramón Asensio 14 in Benimaclet . Owner Manuel Cabezudo opened it as a small repair workshop in 2012. According to a design-oriented feature, Vuelta de Tuerca treats the bicycle as an art object, specializing in custom builds and refurbishments . The shop is noted for custom paint and chrome jobs, building cargo bikes, and restoring classic bicycles to customer specifications . Its interior (and hand-painted signage) have been highlighted by a local design map . Beyond this creative bicycle focus, the store operates as a typical local bike retailer.",
+      "lat": 39.482053,
+      "lon": -0.35846,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Betel School",
+      "desc": "Betel School is a private early-childhood center (guardería) located at C/ Mistral 4–8 in Benimaclet . It’s described as a play-based, multilingual preschool: the Betel website emphasizes a trilingual (Spanish, Valencian, English) environment with experienced staff and home-cooked meals . The school advertises wide hours and a focus on safety and learning through play, and mentions having over 20 years of teaching experience",
+      "lat": 39.484156,
+      "lon": -0.358112,
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "name": "Horchatería Els Sariers",
+      "desc": "Horchatería Els Sariers is a well-known family-run horchata café at Carrer del Sarcet 6, on the edge of Benimaclet . The owners grow their own chufa (tiger nuts) in Alboraya and have been producing horchata for decades (“más de 60 años elaborando horchata” ). In 1995 they opened the current horchatería at this address to sell their traditional horchata and other treats . It’s widely regarded as an institution – even described on travel sites as a “mythical horchatería” of Valencia . Besides horchata and seasonal buñuelos, they also serve coffee, ice cream and desserts. Altogether, Els Sariers has a documented legacy and is part of the barrio’s culinary tradition.",
+      "lat": 39.492677,
+      "lon": -0.357247,
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "name": "Lacolada Benimaclet",
+      "desc": "Lacolada Benimaclet is a self-service laundromat at Carrer dels\r\nGermans Villalonga 1 in Benimaclet . It provides modern washers and dryers so customers can do\r\ntheir own laundry. The business markets itself on convenience and quality cleaning products",
+      "lat": 39.483819,
+      "lon": -0.357706,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Partisano",
+      "desc": "Partisano València is a clothing and accessories shop on Carrer Utiel 12 in Benimaclet . It is the local branch of PartisanoWear, a Catalan brand known for politically themed Tshirts and streetwear (with slogans and designs from punk and independentist circles). The Benimaclet store sells the Partisano line of hoodies, jackets and hats.",
+      "lat": 39.485823,
+      "lon": -0.359576,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Tres pistons",
+      "desc": "Tres Pistons (Academia de Música 3 Pistons) is a private music school on Carrer de l’Arquitecte Arnau 28 in Benimaclet . Opened around 2020, it offers instrument lessons (guitar, drums, etc.) and music theory classes for students of all ages. The Mapcarta listing confirms its location and nature as a “music school” . It appears to be a typical barrio conservatory (it has its own website) where children and teens learn music with local teachers.",
+      "lat": 39.485644,
+      "lon": -0.35637,
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "name": "Òptica Duato",
+      "desc": "Òptica Duato is an optician store at Carrer del Sant Esperit 3 in Benimaclet . It’s a family-run optical clinic focused on personalized eye care. The owner describes the shop as especially attentive to children’s vision and to fitting progressive lenses for adults . The website emphasizes a warm, professional service across all ages. In short, it’s a neighborhood eyeglass store with pediatric and geriatric optometry services",
+      "lat": 39.485288,
+      "lon": -0.359034,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Bronchales",
+      "desc": "Bronchales is a traditional bakery/patisserie on Calle de la Guardia Civil, near the Jardins de la Guardia Civil park . It offers an assortment of breads, cakes and pastries baked on-site. Yelp lists it at G. Civil 20 and notes pastries as well as daily bread . One review mentions it has won bakery awards. It’s a long-established family bakery serving Benimaclet and nearby Ciudad Universitaria residents.",
+      "lat": 39.481743,
+      "lon": -0.357363,
+      "tags": [
+        "food",
+        "park"
+      ]
+    },
+    {
+      "name": "Felguera Fotógrafo",
+      "desc": "A well-known professional photography studio in Benimaclet, at Carrer Prudenci Alcón i Mateu 3 . A local photography directory describes it as “un reconocido estudio de fotografía ubicado en el corazón de Benimaclet, Valencia” , indicating a solid neighborhood reputation. It offers a broad range of photography (industrial, advertising, wedding and portrait work), and client reviews note its high quality – one listing mentions “más de cien valoraciones en Google y una puntuación perfecta de 5 estrellas” (i.e. over 100 five-star reviews). Overall, Felguera is regarded as an established photo studio with a loyal client base",
+      "lat": 39.48527,
+      "lon": -0.35534,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Kaiowa",
+      "desc": "A small artisan bag studio known for upcycling bicycle tubes and sail materials into backpacks and bags. It was run by artisan Diego Senra and operated a shop-workshop in Benimaclet on Carrer Torreta de Miramar for several years. A local cultural blog explains that Senra “a partir del caucho de las cámaras de las bicicletas crea bolsos urbanos y riñoneras” (i.e. “from bicycle tire rubber he makes urban bags\r\nand fanny packs”), along with other recycled materials. The same article notes that “durante cuatro años\r\ntuvo una tienda-taller… en Benimaclet, llamada Kaiowa” . (The workshop address was Torreta de\r\nMiramar, as noted.) After closing the physical store, Kaiowa continued as an online-only shop. Today it’s\r\nrecognized locally as an artisan upcycling store, though it is no longer open to walk-in business.",
+      "lat": 39.487598,
+      "lon": -0.361729,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "L'Agulla i el didal",
+      "desc": "A traditional haberdashery and sewing machine shop at C/ Barón de San Petrillo 27, Benimaclet . A\r\nneighborhood listing describes its services: “Venta y reparación de máquinas de coser: Singer, Alfa,\r\nWerthein, Juki, Elna… Arreglos y composturas de ropa: tejano, sastrería, cortinas… Servicio de\r\nplanchado” . In other words, it sells and repairs sewing machines and does clothing alterations\r\n(jeans, tailoring, curtains) plus ironing. It appears to be a long-established local tailor/mercería",
+      "lat": 39.486066,
+      "lon": -0.360333,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Associació Música Jove",
+      "desc": "A non-profit musical association founded in 1994 in Benimaclet . It encompasses music education\r\n(its “Taller Música Joven”), performance (a youth orchestra, choir and “Banda Música Joven”), and\r\noutreach (a “Mini Auditori” for concerts) . The federation notes that these weekly activities involve\r\n“más de 500 personas entre socios, alumnos y profesores” . Essentially, AMJ is another local music\r\nschool/band collective run by neighbors – focused especially on youth musicians. It holds concerts and\r\neven an international composition contest (“Música Jove”), but details beyond its founding and\r\nprograms came from the FSMCV press release.",
+      "lat": 39.485072,
+      "lon": -0.358002,
+      "tags": [
+        "live",
+        "education"
+      ]
+    },
+    {
+      "name": "Poliesportiu Benimaclet",
+      "desc": "The municipal sports center on C/ Daniel Balaciart s/n (Benimaclet) . It was comprehensively\r\nrenovated in 2012 to add many facilities. The official description lists: “1 Pista polideportiva cubierta;\r\n1 Vaso de 25 m descubierto; 1 Vaso de enseñanza; 1 Campo de fútbol 7 de césped artificial; 2 Pistas de\r\ntenis; 2 Pistas de padel; 1 Sala de esgrima; 1 Sala tatami (Judo/Lucha)” . In other words, it has an\r\nindoor sports hall, outdoor pools (25 m and shallow teaching pool), a turf mini-soccer field, tennis and\r\npadel courts, and rooms for fencing and martial arts. A wide range of classes (basketball, handball,\r\nfutsal, hockey, tennis, swimming, etc.) are offered for both adults and children . This is a public\r\nfacility managed by Valencia’s sports foundation. It is well-known to locals as the barrio’s main sports\r\nhub.",
+      "lat": 39.480821,
+      "lon": -0.354368,
+      "tags": [
+        "live",
+        "sport"
+      ]
+    },
+    {
+      "name": "Tattoo & Piercing Sudestada",
+      "desc": "A tattoo and piercing studio in Benimaclet, currently at Carrer Dr. Vicente Zaragozá 57 . It is a private\r\nshop run by local artists. (Its Instagram and Facebook identify tattooists Sergio García and Dani Origami\r\nand piercer Merche Campos, but no formal write-ups exist.)",
+      "lat": 39.484296,
+      "lon": -0.360062,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "La Piratería",
+      "desc": "A pirate-ship–themed tattoo and piercing studio on Valencia’s Primat Reig avenue in Benimaclet. The\r\nmoment you step inside, the décor makes you “feel like you’re on a pirate ship” . Opened in 2014, it\r\nmixes old-school tattoo parlor style with modern trends",
+      "lat": 39.487332,
+      "lon": -0.3672,
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "name": "Amicgos",
+      "desc": "A small, family-run pet store and dog-grooming salon on Enrique Navarro street. Owners Aurora and Alejandro opened it out of their love for animals. It stocks food and supplies for dogs and cats and provides grooming in a warm, personal atmosphere. A local pet-care blog praises Amicgos as “a topnotch pet shop in Benimaclet, with continuous offers and initiatives like selling pet food by weight”",
+      "lat": 39.485089,
+      "lon": -0.359507,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Suerte Loca",
+      "desc": "A quirky gift shop on Carrer Guardia Civil 16 that’s become a Benimaclet icon. Owner Javier Primo ran\r\nthe place for over 24 years . The store is literally split down the middle – on one side shelves of\r\nwhimsical children’s toys and gifts, on the other side nostalgic, offbeat items for adults . It specializes\r\nin unique, “original” gifts, consciously avoiding mainstream franchise products. Customers say that\r\n“people come in not knowing what they’re looking for, knowing that here they will find something\r\noriginal” . The shop has a warm, eclectic vibe and a loyal local following. In fact, it’s so ingrained in\r\nthe barrio that Suerte Loca throws a big street-side birthday party each year and even hands out tiny\r\n“lucky dice” to customers as a token of its quirky charm . Overall it feels like shopping in a childhood\r\nmemory box – neighbors browse and happily discover unexpected treasures among the racks.",
+      "lat": 39.48207,
+      "lon": -0.358054,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Terreta Neta",
+      "desc": "An eco-conscious bulk grocery and activity space on C/ Reverendo Tramoyeres. It’s a “zero-waste” shop\r\nselling organic, plastic-free, local (km0) products, from grains and spices to personal care items. But it’s\r\nmore than a store: it also hosts workshops, talks and classes about sustainable living. In fact, one local\r\ndirectory describes Terreta Neta as both a place to find “residuo cero, ecológicos y km0” products and\r\nalso “an environmental education and transition space” with workshops and talks on eco-friendly\r\nlifestyles . Customers rave that it’s run with “a lot of passion and dedication” and that you can find\r\neverything needed to care for the planet there",
+      "lat": 39.485065,
+      "lon": -0.361332,
+      "tags": [
+        "retail"
+      ]
+    },
+    {
+      "name": "Vera",
+      "desc": "A veterinary clinic and pet grooming salon at Carrer de Juan Giner 16. It’s a family-run clinic that touts a\r\nlong track record and “love for animals” as the basis of its service . In practice, clients praise its\r\ncaring staff: one longtime pet owner writes that the veterinarians are “very kind, pleasant, and very\r\nprofessional,” noting that they treat the animals “phenomenally”",
+      "lat": 39.484791,
+      "lon": -0.359186,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Tamarit",
+      "desc": "Short for Clínica Veterinaria Doctor Tamarit, this is a fully equipped vet hospital on Carrer de la Pobla\r\nLlarga 13. The clinic’s own description emphasizes decades of experience providing “professional and\r\ntop-quality service” . It has modern facilities – lab, X-ray, surgery and day-hospital wards – to handle\r\nserious cases",
+      "lat": 39.482956,
+      "lon": -0.360027,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Bodega Baltasar Seguí",
+      "desc": "A beloved wine shop and tapas bar at Emilio Baró 17. Founded in 1957 , it’s one of Benimaclet’s\r\noldest establishments and a true local institution. The narrow space is lined with wooden wine barrels\r\nand bottles on shelves . Neighbors squeeze onto barrel-shaped stools by a marble counter to enjoy\r\nglasses of local red wine, craft beer or sweet vermouth, along with simple tapas. Reviewers praise its\r\nauthentic atmosphere: one guide notes the “friendly and welcoming” service and calls it a “distinctive,\r\nsuperb place” to drink wine in Valencia",
+      "lat": 39.485242,
+      "lon": -0.36227,
+      "tags": [
+        "food",
+        "retail"
+      ]
+    },
+    {
+      "name": "Swimming Pool",
+      "desc": "Dive in. Exit the noise.",
+      "lat": 39.481055,
+      "lon": -0.353973,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Swimming Pool",
+      "desc": "Dive in. Exit the noise.",
+      "lat": 39.487488,
+      "lon": -0.357875,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Swimming Pool",
+      "desc": "Dive in. Exit the noise.",
+      "lat": 39.481434,
+      "lon": -0.358291,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Recycling",
+      "desc": "Trash whispered: ‘I’m not done yet.’",
+      "lat": 39.484469,
+      "lon": -0.355154,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Recycling",
+      "desc": "Reborn. Reused. Rewritten.",
+      "lat": 39.484599,
+      "lon": -0.355484,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Recycling",
+      "desc": "Trash whispered: ‘I’m not done yet.’",
+      "lat": 39.484262,
+      "lon": -0.353993,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "Recycling",
+      "desc": "Reborn. Reused. Rewritten.",
+      "lat": 39.48033,
+      "lon": -0.355407,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Not just a game. A hundred stories per square meter.",
+      "lat": 39.482337,
+      "lon": -0.354804,
+      "tags": [
+        "park",
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Run fast. Fall loud. Get up laughing.",
+      "lat": 39.482804,
+      "lon": -0.357368,
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Not just a game. A hundred stories per square meter.",
+      "lat": 39.483824,
+      "lon": -0.35462,
+      "tags": [
+        "park",
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Run fast. Fall loud. Get up laughing.",
+      "lat": 39.48085,
+      "lon": -0.354196,
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Not just a game. A hundred stories per square meter.",
+      "lat": 39.490489,
+      "lon": -0.356525,
+      "tags": [
+        "park",
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Run fast. Fall loud. Get up laughing.",
+      "lat": 39.491027,
+      "lon": -0.356854,
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Not just a game. A hundred stories per square meter.",
+      "lat": 39.490874,
+      "lon": -0.357961,
+      "tags": [
+        "park",
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Run fast. Fall loud. Get up laughing.",
+      "lat": 39.482623,
+      "lon": -0.357005,
+      "tags": [
+        "sport"
+      ]
+    },
+    {
+      "name": "pitch",
+      "desc": "Not just a game. A hundred stories per square meter.",
+      "lat": 39.482738,
+      "lon": -0.357069,
+      "tags": [
+        "park",
+        "sport"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Built for joy. Weathered by legends.",
+      "lat": 39.482976,
+      "lon": -0.353432,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Small feet. Big dreams. Loud laughs.",
+      "lat": 39.483207,
+      "lon": -0.353431,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Built for joy. Weathered by legends.",
+      "lat": 39.489333,
+      "lon": -0.357009,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Small feet. Big dreams. Loud laughs.",
+      "lat": 39.479503,
+      "lon": -0.355958,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Built for joy. Weathered by legends.",
+      "lat": 39.481282,
+      "lon": -0.356509,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Small feet. Big dreams. Loud laughs.",
+      "lat": 39.481446,
+      "lon": -0.356487,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Built for joy. Weathered by legends.",
+      "lat": 39.489308,
+      "lon": -0.358224,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "playground",
+      "desc": "Small feet. Big dreams. Loud laughs.",
+      "lat": 39.491863,
+      "lon": -0.358543,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "fitness_station",
+      "desc": "Sweat here. Carry it everywhere else lighter.",
+      "lat": 39.488139,
+      "lon": -0.362573,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "fountain",
+      "desc": "A pause. A ripple. A thought.",
+      "lat": 39.48117,
+      "lon": -0.352999,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "fountain",
+      "desc": "Don’t just look—listen. The water speaks.",
+      "lat": 39.482103,
+      "lon": -0.356571,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "fountain",
+      "desc": "A pause. A ripple. A thought.",
+      "lat": 39.481373,
+      "lon": -0.357469,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "dog_park",
+      "desc": "Bark once if you’re happy. Twice if you’re free.",
+      "lat": 39.488974,
+      "lon": -0.366426,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "drinking_water",
+      "desc": "Sip slow. You’ve traveled far.",
+      "lat": 39.491963,
+      "lon": -0.357702,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.48545,
+      "lon": -0.354432,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.485394,
+      "lon": -0.354442,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.485356,
+      "lon": -0.354101,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.484745,
+      "lon": -0.354298,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.4848,
+      "lon": -0.35428,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.484817,
+      "lon": -0.354119,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.485154,
+      "lon": -0.354903,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.485192,
+      "lon": -0.355026,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.482553,
+      "lon": -0.357238,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.483354,
+      "lon": -0.35657,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.486948,
+      "lon": -0.354451,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.491881,
+      "lon": -0.357965,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.492227,
+      "lon": -0.357662,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.492365,
+      "lon": -0.357296,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.492447,
+      "lon": -0.357492,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.48913,
+      "lon": -0.357012,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.489237,
+      "lon": -0.35706,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.487704,
+      "lon": -0.367457,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.486541,
+      "lon": -0.367966,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.486617,
+      "lon": -0.368295,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.480024,
+      "lon": -0.356767,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.479972,
+      "lon": -0.356595,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.48027,
+      "lon": -0.357087,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.480259,
+      "lon": -0.356981,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.492474,
+      "lon": -0.358392,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.491853,
+      "lon": -0.358516,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.491662,
+      "lon": -0.358628,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Temporary throne. Rule wisely.",
+      "lat": 39.491973,
+      "lon": -0.358589,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bench",
+      "desc": "Take a breath. The world can wait.",
+      "lat": 39.491761,
+      "lon": -0.358662,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.487154,
+      "lon": -0.36898,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.486314,
+      "lon": -0.369852,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.486212,
+      "lon": -0.369519,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.486326,
+      "lon": -0.359231,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.484518,
+      "lon": -0.354493,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.487476,
+      "lon": -0.35942,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.484766,
+      "lon": -0.358118,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.484683,
+      "lon": -0.358131,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.485903,
+      "lon": -0.355688,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.485889,
+      "lon": -0.355532,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.486215,
+      "lon": -0.35784,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.486205,
+      "lon": -0.357784,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.485305,
+      "lon": -0.360041,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.484831,
+      "lon": -0.358177,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.486112,
+      "lon": -0.357693,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.484379,
+      "lon": -0.356762,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.484267,
+      "lon": -0.356763,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.48608,
+      "lon": -0.357353,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.486803,
+      "lon": -0.361127,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.485898,
+      "lon": -0.357515,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.485064,
+      "lon": -0.359254,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.486064,
+      "lon": -0.357899,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.486128,
+      "lon": -0.357049,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.48603,
+      "lon": -0.361798,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.484326,
+      "lon": -0.356623,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.485434,
+      "lon": -0.360497,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.486443,
+      "lon": -0.36144,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.485833,
+      "lon": -0.361582,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.486061,
+      "lon": -0.357132,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.486018,
+      "lon": -0.356872,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.484917,
+      "lon": -0.358643,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.48595,
+      "lon": -0.35619,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.488275,
+      "lon": -0.358901,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.486724,
+      "lon": -0.354554,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.487209,
+      "lon": -0.357602,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.486911,
+      "lon": -0.357697,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.48503,
+      "lon": -0.356533,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.479924,
+      "lon": -0.354928,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.48355,
+      "lon": -0.357643,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.480639,
+      "lon": -0.355757,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.481046,
+      "lon": -0.355936,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.481132,
+      "lon": -0.356634,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.483601,
+      "lon": -0.357808,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "No engines. No ego. Just legs and rage.",
+      "lat": 39.482893,
+      "lon": -0.357986,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Tie your steed. The next quest can wait.",
+      "lat": 39.480926,
+      "lon": -0.356154,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Park here, save the planet. No biggie.",
+      "lat": 39.48169,
+      "lon": -0.357064,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "bicycle_parking",
+      "desc": "Two wheels. One purpose.",
+      "lat": 39.481811,
+      "lon": -0.356966,
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.48109,
+      "lon": -0.352282,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.484832,
+      "lon": -0.35447,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.485735,
+      "lon": -0.35561,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.487761,
+      "lon": -0.368571,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.487843,
+      "lon": -0.367277,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.485438,
+      "lon": -0.354156,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.485351,
+      "lon": -0.354168,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.485376,
+      "lon": -0.354016,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.48543,
+      "lon": -0.354514,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.485154,
+      "lon": -0.355045,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.485163,
+      "lon": -0.354861,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.484926,
+      "lon": -0.35546,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.488685,
+      "lon": -0.365884,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.483764,
+      "lon": -0.353374,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.484032,
+      "lon": -0.353411,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.481434,
+      "lon": -0.355417,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.481248,
+      "lon": -0.355648,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.482194,
+      "lon": -0.356455,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.480509,
+      "lon": -0.356553,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.481472,
+      "lon": -0.357348,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.481278,
+      "lon": -0.357582,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.487644,
+      "lon": -0.367537,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.487898,
+      "lon": -0.362361,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.488135,
+      "lon": -0.362702,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.47964,
+      "lon": -0.355347,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.479697,
+      "lon": -0.355427,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.479294,
+      "lon": -0.355773,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.48624,
+      "lon": -0.366485,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.486371,
+      "lon": -0.366586,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "No ticket. No rules. Just sit and bloom.",
+      "lat": 39.486374,
+      "lon": -0.366569,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Planted by neighbors. Grown by time.",
+      "lat": 39.490088,
+      "lon": -0.35311,
+      "tags": [
+        "park"
+      ]
+    },
+    {
+      "name": "garden",
+      "desc": "Buzz in. Chill out. The plants are watching.",
+      "lat": 39.486873,
+      "lon": -0.351939,
+      "tags": [
+        "park"
+      ]
     }
   ]
 }
