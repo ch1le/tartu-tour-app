@@ -12,7 +12,7 @@
     "@expo-google-fonts/raleway": "^0.4.1",
     "@gorhom/bottom-sheet": "^4.5.5",
     "expo": "~53.0.13",
-    "expo-app-loading": "^2.1.1",
+    "expo-app-loading": "^1.0.3",
     "expo-font": "~13.3.2",
     "expo-status-bar": "~2.2.3",
     "haversine-distance": "^1.2.4",
@@ -21,7 +21,9 @@
     "react-native": "0.79.4",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-maps": "1.20.1",
-    "react-native-reanimated": "~3.17.4"
+    "react-native-reanimated": "~3.17.4",
+    "expo-splash-screen": "~0.30.10",
+    "expo-modules-core": "~2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
